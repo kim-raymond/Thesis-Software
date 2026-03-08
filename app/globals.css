@@ -24,3 +24,18 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+.bg-map1{
+  background-image: url(../img/THRD.png);
+}
+.bg-avatar1{
+  background-image: url(../img/banana.png);
+}
+/* .font-medium{
+  font-weight: 600;
+} */
+.bg-floor{
+  background-image:url(../img/Floor.png);
+}
+.bg-path{
+  background-image:url(../img/path.png)
+}
