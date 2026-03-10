@@ -1,6 +1,9 @@
 'use client'
 import {easeIn, motion} from "motion/react"
-import {useState} from "react"
+import {useState,useEffect} from "react"
+
+import { db } from "@src/lib/firebase"; // Import the DB we initialized earlier
+import { collection, addDoc, onSnapshot, query, orderBy, serverTimestamp,deleteDoc,doc } from "firebase/firestore";
 
 export default function Map (){
     const box ={
@@ -9,19 +12,38 @@ export default function Map (){
         backgroundColor:"#ff0088",
         borderRadius:"50%",
     }
-    // interface Position{
-    //     left:number,
-    //     bottom:number
-    // }
-    // const [asset1Postion,setAsset1Position] = useState<Position[]>([]);
-    const asset1Postion ={
-        left:50,
-        bottom:40,
+    interface Position{
+        left:number,
+        bottom:number
     }
+    const [asset1Position,setAsset1Position] = useState<Position>({left:60,bottom:36});
+
+    useEffect(() => {
+    // Create a query to get tasks ordered by time
+    const q = query(collection(db, "sensor_readings"), orderBy("createdAt", "asc"));
+
+    // This listener updates the UI automatically whenever Firestore changes!
+    const unsubscribe = onSnapshot(q, (snapshot) => {
+    const latestReading = snapshot.docs[snapshot.docs.length - 1];
+    const latest = snapshot.docs[snapshot.docs.length - 1];
+     if (latest) {
+    setAsset1Position(latest.data() as Position);
+     }
+    });
+    
+    // Stop listening when page closes
+    return () => unsubscribe(); 
+  }, []);
+
     return(
         <div className="h-[85vh] w-full flex items-center justify-center">
             <div className="bg-map1 bg-center bg-cover w-[76rem] h-full relative">
-            <div className={`absolute flex items-center justify-center rounded-full w-24 left-[60%] bottom-[36%]`}>            
+            <div className={`absolute flex items-center justify-center rounded-full w-24`} 
+            style={{
+                left:`${asset1Position.left}%`,
+                bottom:`${asset1Position.bottom}%`,
+                transition:"all 0.5s ease-in-out"
+            }}>            
             <motion.div
             initial={{ scale: 0.6}}
             animate={{ scale:1}}

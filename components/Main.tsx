@@ -44,7 +44,7 @@ export default function({logIn,setLogIn}:loginProps){
         <div className="bg-stone-300 w-full h-140 relative flex flex-col items-center px-6">
         {/* Search Section */}
         <form className="shadow-stone-500 absolute top-2 z-20" action="">
-        <input className="bg-stone-100 py-2 px-4 rounded-l-md w-80 focus:outline-none focus:bg-white" type="text" placeholder="Find asset"/>
+        <input className="bg-stone-100 py-2 px-4 rounded-l-md w-80 focus:outline-none focus:bg-white" type="text" placeholder="Find Equipment"/>
         <button className="py-2 px-3 text-stone-100 font-medium bg-blue-400 rounded-r-sm hover:cursor-pointer" type="submit">Find</button>
         </form>
 
@@ -58,7 +58,7 @@ export default function({logIn,setLogIn}:loginProps){
 
         <div className='w-full flex justify-between items-baseline text-[0.875rem]'>
         <span className='font-semibold text-stone-700'>Tag No.</span>
-        <span className='text-[0.75rem]'>Signal</span>
+        <span className='text-[0.75rem]'>battery</span>
         </div>
 
         {/* ACTIVE LIST CONTAINER */}
@@ -130,7 +130,7 @@ export default function({logIn,setLogIn}:loginProps){
         </div>
 
         {/* FOOTER */}
-        <div className='w-full h-max p-4 bg-stone-800 flex flex-col text-[0.875rem] text-stone-200 items-center justify-center'>
+        <div className='w-full h-max p-4 bg-stone-800 flex flex-col text-[0.75rem] text-stone-200 items-center justify-center'>
         <p>all rights reserve</p>
         <p> magallanes | pacheco @2026</p>
         </div>

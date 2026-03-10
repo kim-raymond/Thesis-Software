@@ -12,7 +12,7 @@ export default function ({logIn, setLogIn}:LogInProps){
     function changeLoginStat(e:React.FormEvent<HTMLFormElement>){
         e.preventDefault();
         if(userId && password!==''){
-            if(password=='thesisdefended'){
+            if(password=='thesisdefended'&& userId=='admin'){
              setLogIn(true);
             }
         }
