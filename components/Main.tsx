@@ -1,6 +1,6 @@
 'use client'
 import Map from '@/components/mapContainer'
-import React,{Dispatch, SetStateAction,useState} from 'react';
+import React,{useState} from 'react';
 interface loginProps{
     logIn:boolean;
     setLogIn:React.Dispatch<React.SetStateAction<boolean>>;

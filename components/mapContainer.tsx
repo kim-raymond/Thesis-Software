@@ -1,10 +1,10 @@
 'use client'
-import {easeIn, motion} from "motion/react"
-import React,{Dispatch, SetStateAction,useState,useEffect} from 'react';
+import {motion} from "motion/react"
+import React,{useState,useEffect} from 'react';
 
 
 import { db } from "@src/lib/firebase"; // Import the DB we initialized earlier
-import { collection, addDoc, onSnapshot, query, orderBy, serverTimestamp,deleteDoc,doc } from "firebase/firestore";
+import { collection, addDoc, onSnapshot, query, orderBy} from "firebase/firestore";
 
 interface stateProps{
     isBiomed:boolean;
