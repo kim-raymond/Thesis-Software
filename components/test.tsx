@@ -20,8 +20,8 @@ export default function Login() {
 
     try {
       await addDoc(collection(db, "sensor_readings"), {
-        left: input,
-        bottom: 36,
+        right: input,
+        bottom: 47,
         createdAt: serverTimestamp(), // Records when it was added
       });
       setInput(""); // Clear input after clicking

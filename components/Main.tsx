@@ -7,12 +7,13 @@ interface loginProps{
 }
 export default function({logIn,setLogIn}:loginProps){
 
-    const signal = 80;
+    const signal = "M1220050188";
 
     const changeLogIn=()=>{
         setLogIn(false);
     }
     const [floorOption, setFloorOptions] = useState(false);
+    const [isBiomed, setIsBiomed] = useState(false);
 
     const handleFloorOpt = () =>{
         if(!floorOption){
@@ -21,6 +22,12 @@ export default function({logIn,setLogIn}:loginProps){
         else{
         setFloorOptions(false)
         }
+    }
+
+    const changeFloor = () =>{
+        setIsBiomed(true);
+        setFloorOptions(false);
+        console.log(isBiomed);
     }
 
     return(
@@ -49,7 +56,7 @@ export default function({logIn,setLogIn}:loginProps){
         </form>
 
         {/* ACTIVE TAGS WRAPPER */}
-        <div className='z-20 h-full w-[12rem] bg-stone-100 absolute flex flex-col left-0 py-[1.125rem] px-[1.5rem] gap-4'>
+        <div className='z-20 h-full w-[16rem] bg-stone-100 hidden flex flex-col left-0 py-[1.125rem] px-[1.5rem] gap-4'>
         {/* header */}
         <div className='w-full flex justify-between'>
         <span className='font-semibold text-stone-700'>Active Tags</span>
@@ -57,46 +64,46 @@ export default function({logIn,setLogIn}:loginProps){
         </div>
 
         <div className='w-full flex justify-between items-baseline text-[0.875rem]'>
-        <span className='font-semibold text-stone-700'>Tag No.</span>
-        <span className='text-[0.75rem]'>battery</span>
+        <span className='font-semibold text-stone-700'>Device</span>
+        <span className='text-[0.75rem]'>Serial No.</span>
         </div>
 
         {/* ACTIVE LIST CONTAINER */}
         <div className='w-full text-[0.875rem] flex flex-col gap-[0.25rem]'>
 
         <section className='w-full flex justify-between'>
-            <span className='text-green-500'>Asset 1</span>
-            <span className='text-blue-300'>{signal} %</span>
+            <span className='text-green-500'>Patient Monitor</span>
+            <span className='text-blue-300'>{signal} </span>
         </section>
 
         <section className='w-full flex justify-between'>
-            <span className=''>Asset 2</span>
-            <span className='text-blue-300'>{signal} %</span>
+            <span className=''>Infusion Pump</span>
+            <span className='text-blue-300'>{signal} </span>
         </section>
 
         <section className='w-full flex justify-between'>
-            <span className=''>Asset 3</span>
-            <span className='text-blue-300'>{signal} %</span>
+            <span className=''>Surgical Pump</span>
+            <span className='text-blue-300'>{signal} </span>
         </section>
 
         <section className='w-full flex justify-between'>
-            <span className=''>Asset 4</span>
-            <span className='text-blue-300'>{signal} %</span>
+            <span className=''>Suction Machine</span>
+            <span className='text-blue-300'>{signal} </span>
         </section>
 
         <section className='w-full flex justify-between'>
-            <span className=''>Asset 5</span>
-            <span className='text-blue-300'>{signal} %</span>
+            <span className=''>BP Apparatus</span>
+            <span className='text-blue-300'>{signal} </span>
         </section>
 
         <section className='w-full flex justify-between'>
             <span className=''>Asset 6</span>
-            <span className='text-blue-300'>{signal} %</span>
+            <span className='text-blue-300'>{signal} </span>
         </section>
 
         <section className='w-full flex justify-between'>
-            <span className=''>Asset 7</span>
-            <span className='text-blue-300'>{signal} %</span>
+            <span className=''>Infusion Pump</span>
+            <span className='text-blue-300'>{signal} </span>
         </section>
         
         </div>
@@ -104,7 +111,7 @@ export default function({logIn,setLogIn}:loginProps){
 
         {/*Map wrapper */}
         <div className='w-full z-10'>
-        <Map />
+        <Map isBiomed={isBiomed} setIsBiomed={setIsBiomed}/>
         </div>
 
         {/* LOWER RIGHT BOTTON WRAPPER */}
@@ -118,6 +125,7 @@ export default function({logIn,setLogIn}:loginProps){
             <button className='w-full px-5 py-1 bg-stone-50 hover:bg-stone-400 rounded-t-md'>GND</button>
             <button className='w-full px-5 py-1 bg-stone-50 hover:bg-stone-400'>2ND</button>
             <button className='w-full px-5 py-1 bg-stone-50 hover:bg-stone-400 rounded-b-md'>3RD</button>
+            <button className='w-full px-5 py-1 bg-stone-50 hover:bg-stone-400 rounded-b-md' onClick={changeFloor}>BIOMED</button>
             </div>
 
             </section>

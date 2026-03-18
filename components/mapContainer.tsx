@@ -1,11 +1,17 @@
 'use client'
 import {easeIn, motion} from "motion/react"
-import {useState,useEffect} from "react"
+import React,{Dispatch, SetStateAction,useState,useEffect} from 'react';
+
 
 import { db } from "@src/lib/firebase"; // Import the DB we initialized earlier
 import { collection, addDoc, onSnapshot, query, orderBy, serverTimestamp,deleteDoc,doc } from "firebase/firestore";
 
-export default function Map (){
+interface stateProps{
+    isBiomed:boolean;
+    setIsBiomed:React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+export default function Map ({isBiomed,setIsBiomed}:stateProps){
     const box ={
         width:25,
         height:25,
@@ -13,10 +19,10 @@ export default function Map (){
         borderRadius:"50%",
     }
     interface Position{
-        left:number,
+        right:number,
         bottom:number
     }
-    const [asset1Position,setAsset1Position] = useState<Position>({left:60,bottom:36});
+    const [asset1Position,setAsset1Position] = useState<Position>({right:60,bottom:42});
 
     useEffect(() => {
     // Create a query to get tasks ordered by time
@@ -37,10 +43,10 @@ export default function Map (){
 
     return(
         <div className="h-[85vh] w-full flex items-center justify-center">
-            <div className="bg-map1 bg-center bg-cover w-[76rem] h-full relative">
+            <div className={`${isBiomed ? 'bg-biomed' : 'bg-map1'} bg-center bg-cover w-[50rem] h-full relative border`}>
             <div className={`absolute flex items-center justify-center rounded-full w-24`} 
             style={{
-                left:`${asset1Position.left}%`,
+                right:`${asset1Position.right}%`,
                 bottom:`${asset1Position.bottom}%`,
                 transition:"all 0.5s ease-in-out"
             }}>            
