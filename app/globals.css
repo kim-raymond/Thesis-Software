@@ -8,6 +8,8 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --font-poppins: var(--font-poppins);
+  --font-gibed: var(--font-gibed);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -38,4 +40,10 @@ body {
 }
 .bg-biomed{
   background-image:url(../img/biomed.png)
+}
+.bg-logIn{
+  background-image: url(../img/logInBg.jfif);
+}
+.bg-logIn2{
+  background-image: url(../img/logInImage.jfif);
 }
