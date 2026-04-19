@@ -61,10 +61,10 @@ useEffect(() => {
         
         // Only update position if confidence is above 90%
         if (result && result.confidence > 90) {
-          console.log(`✓ High confidence prediction (${result.confidence.toFixed(1)}%): Moving to ${result.zone.name}`);
+          console.log(` High confidence prediction (${result.confidence.toFixed(1)}%): Moving to ${result.zone.name}`);
           setCurrentZone(result.zone);
         } else if (result) {
-          console.warn(`⚠ Low confidence prediction (${result.confidence.toFixed(1)}%) - Position unchanged`);
+          console.warn(` Low confidence prediction (${result.confidence.toFixed(1)}%) - Position unchanged`);
         }
       }
     }
