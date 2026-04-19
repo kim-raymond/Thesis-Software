@@ -25,6 +25,12 @@ export default function Map({ isBiomed, setIsBiomed }: stateProps) {
 useEffect(() => {
   initAndTrainModel();
 
+  // Only initialize Firebase listeners if db is available (client-side only)
+  if (!db) {
+    console.warn("Firebase not available, skipping real-time data fetching");
+    return;
+  }
+
   // fetch the last 10-20 readings to ensure have at least one from each ID
   const q = query(
     collection(db, "sensor_readings"), 

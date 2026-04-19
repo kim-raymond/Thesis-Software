@@ -3,8 +3,6 @@ import { initializeApp, getApps, getApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
@@ -18,25 +16,27 @@ const firebaseConfig = {
   measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID
 };
 
-// Initialize Firebase
-const app = getApps().length > 0 ? getApp() : initializeApp(firebaseConfig);
-export const auth = getAuth(app);
-export const db = getFirestore(app);
-export default app;
+// Validate Firebase config
+const isValidConfig = firebaseConfig.apiKey && firebaseConfig.projectId;
 
-// Initialize analytics only in the browser. Calling getAnalytics on the server
-// (during SSR) throws because `window` / `document` are not available.
-let analytics: ReturnType<typeof getAnalytics> | undefined;
-if (typeof window !== "undefined") {
+// Initialize Firebase only if config is valid and we're in browser
+let app: any = null;
+let auth: any = null;
+let db: any = null;
+
+if (isValidConfig && typeof window !== "undefined") {
   try {
-    analytics = getAnalytics(app);
-  } catch (err) {
-    // Analytics may fail to initialize if measurementId is missing or
-    // if running in an environment that blocks it. Log and continue.
-    // Keep the app usable even when analytics isn't available.
-    // eslint-disable-next-line no-console
-    console.warn("Firebase analytics not available:", err);
+    app = getApps().length > 0 ? getApp() : initializeApp(firebaseConfig);
+    auth = getAuth(app);
+    db = getFirestore(app);
+  } catch (error) {
+    console.warn("Firebase initialization failed:", error);
+    // Set to null so components can handle gracefully
+    app = null;
+    auth = null;
+    db = null;
   }
 }
 
-export { analytics };
+export { auth, db };
+export default app;
