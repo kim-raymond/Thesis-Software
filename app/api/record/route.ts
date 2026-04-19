@@ -5,9 +5,10 @@ import path from 'path';
 export async function POST(request: NextRequest) {
   try {
     const { zoneName, zoneId, r1, r2, r3, distance } = await request.json();
+    const zoneIdNumber = Number(zoneId);
 
-    if (!zoneName || zoneId === undefined || r1 === undefined || r2 === undefined || r3 === undefined || distance === undefined) {
-      return NextResponse.json({ error: 'Missing required fields' }, { status: 400 });
+    if (!zoneName || zoneId === undefined || Number.isNaN(zoneIdNumber) || r1 === undefined || r2 === undefined || r3 === undefined || distance === undefined) {
+      return NextResponse.json({ error: 'Missing or invalid required fields' }, { status: 400 });
     }
 
     const filePath = path.join(process.cwd(), 'src', 'data', 'recordedData.json');
@@ -27,7 +28,7 @@ export async function POST(request: NextRequest) {
       r2: Number(r2),
       r3: Number(r3),
       distance: Number(distance),
-      zoneId: Number(zoneId),
+      zoneId: zoneIdNumber,
       zoneName: zoneName,
       timestamp: new Date().toISOString()
     };

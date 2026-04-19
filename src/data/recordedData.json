@@ -1852,5 +1852,23 @@
     "zoneName": "CVS BACK 4",
     "timestamp": "2026-04-18T09:29:05.562Z",
     "distance": "4.61"
+  },
+  {
+    "r1": -60,
+    "r2": -60,
+    "r3": -60,
+    "distance": 5,
+    "zoneId": 1,
+    "zoneName": "Test",
+    "timestamp": "2026-04-19T10:47:59.445Z"
+  },
+  {
+    "r1": -60,
+    "r2": -60,
+    "r3": -60,
+    "distance": 5,
+    "zoneId": 1,
+    "zoneName": "Test",
+    "timestamp": "2026-04-19T10:48:33.588Z"
   }
 ]

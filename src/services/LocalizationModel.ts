@@ -35,12 +35,12 @@ export const initAndTrainModel = (): void => {
   try {
     console.log(" ML: Starting Random Forest training...");
     
-    // Prepare Features (forced to Numbers) and Labels (forced to Numbers)
-    const features = trainingData.map(item => [Number(item.r1), Number(item.r2), Number(item.r3), Number(item.distance)]);
-    const labels = trainingData.map(item => Number(item.zoneId));
+    const validTrainingData = trainingData.filter(item => !Number.isNaN(Number(item.zoneId)));
+    const features = validTrainingData.map(item => [Number(item.r1), Number(item.r2), Number(item.r3), Number(item.distance)]);
+    const labels = validTrainingData.map(item => Number(item.zoneId));
 
     if (features.length === 0) {
-      console.error(" ML Error: trainingData.json is empty.");
+      console.error(" ML Error: trainingData.json has no valid samples.");
       return;
     }
 

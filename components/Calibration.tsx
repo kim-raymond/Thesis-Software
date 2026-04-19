@@ -21,23 +21,30 @@ export default function Calibration() {
     const dataSetLn = 20;
 
     const recordSample = async (signal: SignalData) => {
+        const zoneIdNumber = Number(zoneId);
+
+        if (!zoneName.trim() || Number.isNaN(zoneIdNumber)) {
+            throw new Error('Invalid zone name or zone ID');
+        }
+
         const response = await fetch('/api/record', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({
-                zoneName: zoneName.trim(), 
-                zoneId: parseInt(zoneId), 
-                r1: signal.r1, 
-                r2: signal.r2, 
+                zoneName: zoneName.trim(),
+                zoneId: zoneIdNumber,
+                r1: signal.r1,
+                r2: signal.r2,
                 r3: signal.r3,
                 distance: signal.distance
             }),
         });
 
         if (!response.ok) {
-            throw new Error('Failed to record signal');
+            const errorBody = await response.text();
+            throw new Error(`Failed to record signal: ${errorBody}`);
         }
 
         setRecordedCount(prev => prev + 1);
@@ -102,20 +109,23 @@ export default function Calibration() {
             return;
         }
 
+        const zoneIdNumber = Number(zoneId);
+        if (Number.isNaN(zoneIdNumber)) {
+            alert('Zone ID must be a number');
+            return;
+        }
+
         if (liveSignals.r1 === null || liveSignals.r2 === null || liveSignals.r3 === null) {
             alert('No live signals detected. Please ensure sensors are active.');
             return;
         }
 
-        setLastRecordedSignals({ r1: null, r2: null, r3: null, distance: null });
-        setRecordedCount(0);
-
         if (!isRecording) {
-            setIsRecording(true);
+            setLastRecordedSignals({ r1: null, r2: null, r3: null, distance: null });
+            setRecordedCount(0);
         }
-        if (isRecording) {
-            setIsRecording(false);
-        }
+
+        setIsRecording(prev => !prev);
     };
 
     const percent = isRecording ? (recordedCount / dataSetLn) * 100 : 0;
