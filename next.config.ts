@@ -2,6 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   /* You can put other Next.js options here if you have them */
+  outputFileTracingRoot: __dirname,
 
   webpack: (config, { isServer }) => {
     // This part fixes the 'fs' error for your Random Forest library
