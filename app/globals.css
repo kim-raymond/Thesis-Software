@@ -47,3 +47,6 @@ body {
 .bg-logIn2{
   background-image: url(../img/logInImage.jfif);
 }
+.bg-logo{
+  background-image: url(../img/icon.svg);
+}

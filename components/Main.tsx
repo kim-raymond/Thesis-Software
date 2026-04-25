@@ -59,7 +59,10 @@ export default function({logIn,setLogIn}:loginProps){
         <div className={`${logIn ? '':'hidden'} w-full h-auto bg-stone-50 text-[1rem] text-stone-800`}>
         {/* NAV SECTION OF MAIN */}
         <div className="flex justify-between py-4 relative px-6">
-        <h2 className=" font-bold text-stone-600 items-center">MAPA</h2>
+        <div className="flex gap-[0.8rem] justify-center items-center">
+            <div className="w-[2.9rem] h-[1.9rem] bg-logo bg-cover bg-center bg-no-repeat "></div> 
+            {/* <h2 className="font-semibold text-stone-600 items-center">mapa</h2> */}
+        </div>
         <nav className="flex gap-8 items-center">
             <p className="text-stone-700 text-[0.875rem] font-semibold hover:cursor-pointer">MAP</p>
             <p className="text-stone-700 text-[0.875rem] font-semibold hover:cursor-pointer">TAGS</p>
@@ -81,7 +84,7 @@ export default function({logIn,setLogIn}:loginProps){
         </form>
 
         {/*SIDE BAR WRAPPER */}
-        <div className='z-20 h-full w-[16rem] bg-stone-100 absolute flex flex-col left-0 py-[1.125rem] px-[1.5rem] gap-8'>
+        <div className='hidden md:block z-20 h-full w-[16rem] bg-stone-100 absolute flex flex-col left-0 py-[1.125rem] px-[1.5rem] gap-8'>
         
         <div className='w-full flex flex-col '>
             
@@ -94,7 +97,7 @@ export default function({logIn,setLogIn}:loginProps){
         </div>
 
         {/* ACTIVE LIST CONTAINER */}
-        <div className='w-full text-[0.875rem] flex flex-col gap-[0.25rem] pl-4'>
+        <div className='w-full text-[0.875rem] flex flex-col gap-[0.25rem] pl-4 py-2'>
 
         <section className='w-full flex justify-between items-center'>
             <span className='text-green-500 py-[0.125rem] leading-[1]'>Infusion Pump</span>
@@ -209,7 +212,7 @@ export default function({logIn,setLogIn}:loginProps){
 
         {/* FOOTER */}
         <div className='w-full h-max p-4 bg-stone-800 flex flex-col text-[0.75rem] text-stone-200 items-center justify-center'>
-        <p>all rights reserve</p>
+        <p>All rights reserve</p>
         <p> magallanes | pacheco @2026</p>
         
         </div>

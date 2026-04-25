@@ -15,8 +15,8 @@ export default function Map({ isBiomed, setIsBiomed }: stateProps) {
     const [currentZone, setCurrentZone] = useState<Zone>({
         id: 999,
         name: "INITIALIZING...",
-        x: 85,  
-        y: 42
+        x: 72,  
+        y: 70
     });
 
     const [assetName,setAssetName] = useState<String>("Infusion Pump");
