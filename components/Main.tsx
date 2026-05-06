@@ -78,9 +78,17 @@ export default function({logIn,setLogIn}:loginProps){
         {/* MAIN WRAPPER */}
         <div className="bg-stone-300 w-full h-140 relative flex flex-col items-center px-6">
         {/* Search Section */}
-        <form className={`shadow-stone-500 absolute top-2 z-20 ${showTest||showCalibration?'hidden':''} `}>
-        <input className="bg-stone-100 py-2 px-4 rounded-l-md w-80 focus:outline-none focus:bg-white" type="text" placeholder="Find Equipment"/>
-        <button className="py-2 px-3 text-stone-100 font-medium bg-blue-400 rounded-r-sm hover:cursor-pointer" type="submit">Find</button>
+        <form className={`shadow-stone-500 absolute flex items-center  top-2 z-20 ${showTest||showCalibration?'hidden':''} `}>
+
+        <input className="bg-stone-100 py-2 px-4 rounded-l-full w-80 focus:outline-none focus:bg-white" type="text" placeholder="Find Equipment"/>
+
+        <button className="py-2 px-3 text-stone-100 font-medium bg-green-400 rounded-r-full hover:cursor-pointer" type="submit">
+        <svg xmlns="http://www.w3.org/2000/svg" className='w-[1.2rem] h-[1.5rem]' viewBox="0 0 640 640">
+        {/* <!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--> */}
+        <path fill="rgb(56, 55, 59)" d="M480 272C480 317.9 465.1 360.3 440 394.7L566.6 521.4C579.1 533.9 579.1 554.2 566.6 566.7C554.1 579.2 533.8 579.2 521.3 566.7L394.7 440C360.3 465.1 317.9 480 272 480C157.1 480 64 386.9 64 272C64 157.1 157.1 64 272 64C386.9 64 480 157.1 480 272zM272 416C351.5 416 416 351.5 416 272C416 192.5 351.5 128 272 128C192.5 128 128 192.5 128 272C128 351.5 192.5 416 272 416z"/>
+        </svg>
+
+        </button>
         </form>
 
         {/*SIDE BAR WRAPPER */}
@@ -174,8 +182,11 @@ export default function({logIn,setLogIn}:loginProps){
 
         {/*Map wrapper */}
         <div className={`w-full ${showTest||showCalibration? 'hidden':''} z-10`}>
+
         <Map isBiomed={isBiomed} setIsBiomed={setIsBiomed}/>
+        
         </div>
+
 
         {/* Test Wrapper */}
         <div className={` h-full ${showTest? '':'hidden'}`}>
@@ -211,7 +222,7 @@ export default function({logIn,setLogIn}:loginProps){
         </div>
 
         {/* FOOTER */}
-        <div className='w-full h-max p-4 bg-stone-800 flex flex-col text-[0.75rem] text-stone-200 items-center justify-center'>
+        <div className='w-full h-max p-4 bg-stone-900 flex flex-col text-[0.75rem] text-stone-200 items-center justify-center'>
         <p>All rights reserve</p>
         <p> magallanes | pacheco @2026</p>
         

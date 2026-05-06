@@ -25,7 +25,7 @@ export default function Map({ isBiomed, setIsBiomed }: stateProps) {
 useEffect(() => {
   initAndTrainModel();
 
-  // Only initialize Firebase listeners if db is available (client-side only)
+  // initialize Firebase listeners if db is available
   if (!db) {
     console.warn("Firebase not available, skipping real-time data fetching");
     return;
@@ -65,7 +65,7 @@ useEffect(() => {
           setCurrentZone(result.zone);
         } else if (result) {
           console.warn(` Low confidence prediction (${result.confidence.toFixed(1)}%) - Position unchanged`);
-        }
+        }   
       }
     }
   });

@@ -68,7 +68,7 @@ export const predictCurrentZone = (r1: any, r2: any, r3: any, distance: any): Pr
   if (r1 === null || r2 === null || r3 === null || distance === null || r1 === undefined || r2 === undefined || r3 === undefined || distance === undefined) return undefined;
 
   try {
-    // Force to Numbers (essential for Firestore string inputs)
+    // Convert string inputs to numbers, ensuring they are valid
     const val1 = Number(r1);
     const val2 = Number(r2);
     const val3 = Number(r3);
