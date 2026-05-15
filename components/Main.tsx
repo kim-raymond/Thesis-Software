@@ -1,8 +1,9 @@
 'use client'
+import React,{useState} from 'react';
 import Map from '@/components/mapContainer'
 import Test from '@/components/test'
-import React,{useState} from 'react';
 import Calibration from '@/components/Calibration';
+import History from './history';
 
 interface loginProps{
     logIn:boolean;
@@ -21,6 +22,8 @@ export default function({logIn,setLogIn}:loginProps){
     const [SysSubSec, setSysSubSec] = useState(false);
     const [showTest, setShowTest] = useState(false);
     const [showCalibration, setShowCalibration] = useState(false);
+    const [showHistory, setShowHistory] = useState(false);
+    const [showSidebar, setShowSidebar] = useState(false);
 
     const handleFloorOpt = () =>{
         if(!floorOption){
@@ -54,21 +57,21 @@ export default function({logIn,setLogIn}:loginProps){
         if(!showCalibration)setShowCalibration(true);
         else setShowCalibration(false) 
     }
+    const handleShowHistory = ()=>{
+        if(!showHistory)setShowHistory(true);
+        else setShowHistory(false);
+    }
 
     return(
         <div className={`${logIn ? '':'hidden'} w-full h-auto bg-stone-50 text-[1rem] text-stone-800`}>
-        {/* NAV SECTION OF MAIN */}
+        {/* TOP SECTION OF MAIN */}
         <div className="flex justify-between py-4 relative px-6">
-        <div className="flex gap-[0.8rem] justify-center items-center">
+        <div className="flex gap-0 justify-center items-center">
             <div className="w-[2.9rem] h-[1.9rem] bg-logo bg-cover bg-center bg-no-repeat "></div> 
-            {/* <h2 className="font-semibold text-stone-600 items-center">mapa</h2> */}
+            <h2 className="font-semibold text-stone-700 items-center">apa</h2>
         </div>
-        <nav className="flex gap-8 items-center">
-            <p className="text-stone-700 text-[0.875rem] font-semibold hover:cursor-pointer">MAP</p>
-            <p className="text-stone-700 text-[0.875rem] font-semibold hover:cursor-pointer">TAGS</p>
-            <p className="text-stone-700 text-[0.875rem] font-semibold hover:cursor-pointer">DEVICE</p>
-        </nav>
-        <div className="flex gap-2 items-center group">
+
+        <div className="flex gap-2 items-center">
             <p className="font-medium text-stone-600">Admin</p>
             <div className="hover:cursor-pointer w-7  h-7 full  bg-avatar1 bg-cover bg-center rounded-full"></div>
         <button onClick={changeLogIn} className='absolute hidden group-hover:block group-hover:pointer-events-auto hover:cursor-pointer text-[0.75rem] right-0 bottom-0 bg-gray-200 py-1 px-2'>LOG OUT</button>
@@ -77,8 +80,12 @@ export default function({logIn,setLogIn}:loginProps){
 
         {/* MAIN WRAPPER */}
         <div className="bg-stone-300 w-full h-140 relative flex flex-col items-center px-6">
+
         {/* Search Section */}
-        <form className={`shadow-stone-500 absolute flex items-center  top-2 z-20 ${showTest||showCalibration?'hidden':''} `}>
+        <form className={`
+            shadow-stone-500 absolute items-center  top-2 z-20 
+            ${(showTest || showCalibration || showHistory) ? 'hidden':'flex'} 
+            `}>
 
         <input className="bg-stone-100 py-2 px-4 rounded-l-full w-80 focus:outline-none focus:bg-white" type="text" placeholder="Find Equipment"/>
 
@@ -87,25 +94,32 @@ export default function({logIn,setLogIn}:loginProps){
         {/* <!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--> */}
         <path fill="rgb(56, 55, 59)" d="M480 272C480 317.9 465.1 360.3 440 394.7L566.6 521.4C579.1 533.9 579.1 554.2 566.6 566.7C554.1 579.2 533.8 579.2 521.3 566.7L394.7 440C360.3 465.1 317.9 480 272 480C157.1 480 64 386.9 64 272C64 157.1 157.1 64 272 64C386.9 64 480 157.1 480 272zM272 416C351.5 416 416 351.5 416 272C416 192.5 351.5 128 272 128C192.5 128 128 192.5 128 272C128 351.5 192.5 416 272 416z"/>
         </svg>
-
         </button>
         </form>
 
         {/*SIDE BAR WRAPPER */}
-        <div className='hidden md:block z-20 h-full w-[16rem] bg-stone-100 absolute flex flex-col left-0 py-[1.125rem] px-[1.5rem] gap-8'>
+        <div className={`z-20 h-full bg-stone-100 absolute flex flex-col left-0 py-[1.125rem] px-[1.5rem] gap-8 transform transition-transform duration-300 ease-in-out ${showSidebar ? 'w-6rem' : 'w-[16.25rem]'}`}>
         
         <div className='w-full flex flex-col '>
             
         {/* header */}
-        <span className='font-semibold text-stone-700'>Active Tags</span>
+        <div className='flex justify-between items-center'>
+        <h2 className={`font-semibold text-stone-700 ${showSidebar ? 'hidden' : ''} `}>Active Tags</h2>
 
-        <div className='w-full flex justify-between items-baseline text-[0.75rem] pl-4 py-1.5'>
+        <button onClick={() => setShowSidebar(prev => !prev)} className="p-2 rounded-md hover:bg-stone-200 transition">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" className="w-5 h-5 text-stone-700">
+            <path fill="currentColor" d="M16 132h416c8.8 0 16-7.2 16-16V76c0-8.8-7.2-16-16-16H16C7.2 60 0 67.2 0 76v40c0 8.8 7.2 16 16 16zm416 104H16c-8.8 0-16 7.2-16 16v40c0 8.8 7.2 16 16 16h416c8.8 0 16-7.2 16-16v-40c0-8.8-7.2-16-16-16zm0 160H16c-8.8 0-16 7.2-16 16v40c0 8.8 7.2 16 16 16h416c8.8 0 16-7.2 16-16v-40c0-8.8-7.2-16-16-16z"/>
+        </svg>
+        </button>
+        </div>
+
+        <div className={`w-full flex justify-between items-baseline text-[0.75rem] py-1.5 ${showSidebar ? 'hidden' : ''}`}>
         <span className='font-semibold text-stone-700'>Device</span>
         <span className='text-[0.75rem]'>Serial No.</span>
         </div>
 
         {/* ACTIVE LIST CONTAINER */}
-        <div className='w-full text-[0.875rem] flex flex-col gap-[0.25rem] pl-4 py-2'>
+        <div className={`w-full text-[0.875rem] flex flex-col gap-[0.25rem] py-2 ${showSidebar ? 'hidden' : ''}`}>
 
         <section className='w-full flex justify-between items-center'>
             <span className='text-green-500 py-[0.125rem] leading-[1]'>Infusion Pump</span>
@@ -145,7 +159,7 @@ export default function({logIn,setLogIn}:loginProps){
         </div>
         
         {/* SETTINGS CONTAINER */}
-        <div className='w-full flex flex-col justify-between py-2 border-t border-stone-400'>
+        <div className={`w-full flex flex-col justify-between py-2 border-t border-stone-400 ${showSidebar ? 'hidden' : ''}`}>
         <span className='font-semibold text-stone-700'>Settings</span>
         {/* <span className='text-[0.875rem]'>Signal</span> */}
 
@@ -173,6 +187,7 @@ export default function({logIn,setLogIn}:loginProps){
         <section className={`text-[0.875rem] pl-4 w-auto ${SysSubSec? '':'hidden'} `}>
             <p onClick={handleShowCalibration}>Calibration</p>
             <p onClick={handleShowTest}>Testing</p>
+            <p onClick={handleShowHistory}>History</p>
         </section>
         </section>
         </div>
@@ -181,10 +196,8 @@ export default function({logIn,setLogIn}:loginProps){
         </div>
 
         {/*Map wrapper */}
-        <div className={`w-full ${showTest||showCalibration? 'hidden':''} z-10`}>
-
+        <div className={`w-full ${ (showTest||showCalibration||showHistory) ? 'hidden':''} z-10`}>
         <Map isBiomed={isBiomed} setIsBiomed={setIsBiomed}/>
-        
         </div>
 
 
@@ -196,6 +209,11 @@ export default function({logIn,setLogIn}:loginProps){
         {/* Calibration wrapper */}
         <div className={`h-full w-[50rem] ${showCalibration? '':'hidden'}`}>
         <Calibration/>
+        </div>
+
+        {/* History Wrapper */}
+        <div className={` h-full ${showHistory? '':'hidden'}`}>
+        <History/>
         </div>
 
         {/* LOWER RIGHT BOTTON WRAPPER */}
@@ -213,11 +231,11 @@ export default function({logIn,setLogIn}:loginProps){
             </div>
 
             </section>
-            <section className='flex items-center gap-2 justify-end'>
+            {/* <section className='flex items-center gap-2 justify-end'>
             <p className='text-[0.875rem] align-middle'>PATH</p>
             <button className='w-[3rem] h-[3rem] bg-path bg-cover bg-center bg-stone-800 rounded-full hover:cursor-pointer'>
             </button>
-            </section>
+            </section> */}
         </div>
         </div>
 

@@ -18,7 +18,7 @@ export default function Calibration() {
     const [recordedCount, setRecordedCount] = useState(0);
     const [liveSignals, setLiveSignals] = useState<SignalData>({ r1: null, r2: null, r3: null, distance: null });
     const [lastRecordedSignals, setLastRecordedSignals] = useState<SignalData>({ r1: null, r2: null, r3: null, distance: null });
-    const dataSetLn = 20;
+    const dataSetLn = 45;
 
     const recordSample = async (signal: SignalData) => {
         const zoneIdNumber = Number(zoneId);

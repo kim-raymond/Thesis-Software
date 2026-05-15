@@ -1,0 +1,4367 @@
+[
+  {
+    "r1": -69,
+    "r2": -71,
+    "r3": -74,
+    "zoneId": 7,
+    "zoneName": "CVS BACK 1",
+    "timestamp": "2026-04-18T08:49:53.962Z",
+    "distance": "5.76"
+  },
+  {
+    "r1": -71,
+    "r2": -82,
+    "r3": -89,
+    "distance": 0,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T05:44:20.232Z"
+  },
+  {
+    "r1": -71,
+    "r2": -82,
+    "r3": -94,
+    "distance": 0,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T05:44:20.236Z"
+  },
+  {
+    "r1": -80,
+    "r2": -82,
+    "r3": -89,
+    "distance": 1,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T05:44:20.241Z"
+  },
+  {
+    "r1": -71,
+    "r2": -84,
+    "r3": -94,
+    "distance": 0,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T05:44:23.438Z"
+  },
+  {
+    "r1": -68,
+    "r2": -84,
+    "r3": -94,
+    "distance": 0,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T05:44:30.107Z"
+  },
+  {
+    "r1": -68,
+    "r2": -79,
+    "r3": -94,
+    "distance": 0,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T05:44:32.606Z"
+  },
+  {
+    "r1": -70,
+    "r2": -79,
+    "r3": -94,
+    "distance": 0,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T05:44:40.152Z"
+  },
+  {
+    "r1": -70,
+    "r2": -83,
+    "r3": -94,
+    "distance": 0,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T05:44:42.803Z"
+  },
+  {
+    "r1": -70,
+    "r2": -83,
+    "r3": -96,
+    "distance": 0,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T05:44:46.483Z"
+  },
+  {
+    "r1": -70,
+    "r2": -83,
+    "r3": -95,
+    "distance": 0,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T05:44:56.322Z"
+  },
+  {
+    "r1": -76,
+    "r2": -83,
+    "r3": -95,
+    "distance": 0,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T05:45:00.728Z"
+  },
+  {
+    "r1": -76,
+    "r2": -76,
+    "r3": -95,
+    "distance": 0,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T05:45:02.385Z"
+  },
+  {
+    "r1": -76,
+    "r2": -76,
+    "r3": -88,
+    "distance": 0,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T05:45:06.529Z"
+  },
+  {
+    "r1": -73,
+    "r2": -76,
+    "r3": -88,
+    "distance": 0,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T05:45:10.996Z"
+  },
+  {
+    "r1": -73,
+    "r2": -84,
+    "r3": -88,
+    "distance": 0,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T05:45:12.582Z"
+  },
+  {
+    "r1": -73,
+    "r2": -84,
+    "r3": -95,
+    "distance": 0,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T05:45:16.810Z"
+  },
+  {
+    "r1": -76,
+    "r2": -84,
+    "r3": -95,
+    "distance": 0,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T05:45:20.280Z"
+  },
+  {
+    "r1": -76,
+    "r2": -69,
+    "r3": -95,
+    "distance": 0,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T05:45:22.751Z"
+  },
+  {
+    "r1": -76,
+    "r2": -68,
+    "r3": -95,
+    "distance": 0,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T05:45:32.963Z"
+  },
+  {
+    "r1": -76,
+    "r2": -68,
+    "r3": -92,
+    "distance": 0,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T05:45:35.202Z"
+  },
+  {
+    "r1": -76,
+    "r2": -73,
+    "r3": -92,
+    "distance": 0,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T05:45:43.615Z"
+  },
+  {
+    "r1": -76,
+    "r2": -73,
+    "r3": -93,
+    "distance": 0,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T05:45:45.441Z"
+  },
+  {
+    "r1": -76,
+    "r2": -76,
+    "r3": -93,
+    "distance": 0,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T05:45:53.679Z"
+  },
+  {
+    "r1": -77,
+    "r2": -76,
+    "r3": -93,
+    "distance": 0,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T05:45:57.321Z"
+  },
+  {
+    "r1": -77,
+    "r2": -75,
+    "r3": -93,
+    "distance": 0,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T05:46:03.466Z"
+  },
+  {
+    "r1": -77,
+    "r2": -75,
+    "r3": -92,
+    "distance": 0,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T05:46:05.563Z"
+  },
+  {
+    "r1": -81,
+    "r2": -75,
+    "r3": -92,
+    "distance": 1,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T05:46:07.569Z"
+  },
+  {
+    "r1": -81,
+    "r2": -76,
+    "r3": -92,
+    "distance": 1,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T05:46:13.580Z"
+  },
+  {
+    "r1": -81,
+    "r2": -76,
+    "r3": -84,
+    "distance": 1,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T05:46:15.944Z"
+  },
+  {
+    "r1": -81,
+    "r2": -73,
+    "r3": -84,
+    "distance": 1,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T05:46:23.168Z"
+  },
+  {
+    "r1": -74,
+    "r2": -73,
+    "r3": -84,
+    "distance": 0,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T05:46:26.567Z"
+  },
+  {
+    "r1": -74,
+    "r2": -73,
+    "r3": -88,
+    "distance": 0,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T05:46:28.856Z"
+  },
+  {
+    "r1": -72,
+    "r2": -73,
+    "r3": -88,
+    "distance": 0,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T05:46:43.058Z"
+  },
+  {
+    "r1": -72,
+    "r2": -84,
+    "r3": -88,
+    "distance": 0,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T05:46:44.244Z"
+  },
+  {
+    "r1": -72,
+    "r2": -84,
+    "r3": -93,
+    "distance": 0,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T05:46:47.689Z"
+  },
+  {
+    "r1": -76,
+    "r2": -84,
+    "r3": -93,
+    "distance": 0,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T05:46:53.049Z"
+  },
+  {
+    "r1": -76,
+    "r2": -73,
+    "r3": -93,
+    "distance": 0,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T05:46:54.510Z"
+  },
+  {
+    "r1": -76,
+    "r2": -73,
+    "r3": -87,
+    "distance": 0,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T05:46:58.173Z"
+  },
+  {
+    "r1": -76,
+    "r2": -74,
+    "r3": -87,
+    "distance": 0,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T05:47:15.365Z"
+  },
+  {
+    "r1": -76,
+    "r2": -74,
+    "r3": -91,
+    "distance": 0,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T05:47:20.090Z"
+  },
+  {
+    "r1": -77,
+    "r2": -74,
+    "r3": -91,
+    "distance": 0,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T05:47:24.147Z"
+  },
+  {
+    "r1": -77,
+    "r2": -75,
+    "r3": -91,
+    "distance": 0,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T05:47:25.715Z"
+  },
+  {
+    "r1": -77,
+    "r2": -75,
+    "r3": -87,
+    "distance": 0,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T05:47:30.938Z"
+  },
+  {
+    "r1": -77,
+    "r2": -79,
+    "r3": -87,
+    "distance": 0,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T05:47:35.460Z"
+  },
+  {
+    "r1": -77,
+    "r2": -79,
+    "r3": -93,
+    "distance": 0,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T05:47:40.589Z"
+  },
+  {
+    "r1": -77,
+    "r2": -76,
+    "r3": -93,
+    "distance": 0,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T05:47:45.911Z"
+  },
+  {
+    "r1": -77,
+    "r2": -76,
+    "r3": -90,
+    "distance": 0,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T05:47:52.231Z"
+  },
+  {
+    "r1": -77,
+    "r2": -80,
+    "r3": -90,
+    "distance": 0,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T05:47:56.478Z"
+  },
+  {
+    "r1": -77,
+    "r2": -80,
+    "r3": -84,
+    "distance": 0,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T05:48:02.465Z"
+  },
+  {
+    "r1": -84,
+    "r2": -80,
+    "r3": -84,
+    "distance": 1,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T05:48:08.199Z"
+  },
+  {
+    "r1": -84,
+    "r2": -80,
+    "r3": -93,
+    "distance": 1,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T05:48:12.456Z"
+  },
+  {
+    "r1": -84,
+    "r2": -74,
+    "r3": -93,
+    "distance": 1,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T05:48:17.080Z"
+  },
+  {
+    "r1": -84,
+    "r2": -74,
+    "r3": -86,
+    "distance": 1,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T05:48:23.308Z"
+  },
+  {
+    "r1": -84,
+    "r2": -75,
+    "r3": -86,
+    "distance": 1,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T05:48:27.717Z"
+  },
+  {
+    "r1": -84,
+    "r2": -82,
+    "r3": -86,
+    "distance": 1,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T05:48:39.539Z"
+  },
+  {
+    "r1": -72,
+    "r2": -82,
+    "r3": -86,
+    "distance": 0,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T05:48:42.767Z"
+  },
+  {
+    "r1": -72,
+    "r2": -76,
+    "r3": -86,
+    "distance": 0,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T05:48:51.046Z"
+  },
+  {
+    "r1": -70,
+    "r2": -76,
+    "r3": -86,
+    "distance": 0,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T05:48:57.983Z"
+  },
+  {
+    "r1": -70,
+    "r2": -76,
+    "r3": -88,
+    "distance": 0,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T05:49:02.896Z"
+  },
+  {
+    "r1": -70,
+    "r2": -72,
+    "r3": -88,
+    "distance": 0,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T05:49:11.712Z"
+  },
+  {
+    "r1": -70,
+    "r2": -72,
+    "r3": -92,
+    "distance": 0,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T05:49:13.759Z"
+  },
+  {
+    "r1": -83,
+    "r2": -72,
+    "r3": -92,
+    "distance": 1,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T05:49:17.852Z"
+  },
+  {
+    "r1": -83,
+    "r2": -81,
+    "r3": -92,
+    "distance": 1,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T05:49:22.561Z"
+  },
+  {
+    "r1": -83,
+    "r2": -81,
+    "r3": -96,
+    "distance": 1,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T05:49:24.313Z"
+  },
+  {
+    "r1": -91,
+    "r2": -81,
+    "r3": -96,
+    "distance": 7,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T05:49:32.481Z"
+  },
+  {
+    "r1": -91,
+    "r2": -83,
+    "r3": -96,
+    "distance": 7,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T05:49:34.786Z"
+  },
+  {
+    "r1": -91,
+    "r2": -83,
+    "r3": -95,
+    "distance": 7,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T05:49:34.790Z"
+  },
+  {
+    "r1": -91,
+    "r2": -83,
+    "r3": -96,
+    "distance": 7,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T05:49:34.793Z"
+  },
+  {
+    "r1": -91,
+    "r2": -82,
+    "r3": -95,
+    "distance": 7,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T05:49:43.014Z"
+  },
+  {
+    "r1": -91,
+    "r2": -82,
+    "r3": -94,
+    "distance": 7,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T05:49:46.101Z"
+  },
+  {
+    "r1": -83,
+    "r2": -82,
+    "r3": -94,
+    "distance": 1,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T05:49:52.394Z"
+  },
+  {
+    "r1": -83,
+    "r2": -75,
+    "r3": -94,
+    "distance": 1,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T05:49:54.174Z"
+  },
+  {
+    "r1": -83,
+    "r2": -75,
+    "r3": -83,
+    "distance": 1,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T05:49:56.281Z"
+  },
+  {
+    "r1": -79,
+    "r2": -75,
+    "r3": -83,
+    "distance": 0,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T05:49:58.586Z"
+  },
+  {
+    "r1": -79,
+    "r2": -78,
+    "r3": -83,
+    "distance": 0,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T05:50:04.487Z"
+  },
+  {
+    "r1": -73,
+    "r2": -78,
+    "r3": -83,
+    "distance": 0,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T05:50:12.076Z"
+  },
+  {
+    "r1": -73,
+    "r2": -76,
+    "r3": -83,
+    "distance": 0,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T05:50:14.992Z"
+  },
+  {
+    "r1": -73,
+    "r2": -76,
+    "r3": -96,
+    "distance": 0,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T05:50:17.326Z"
+  },
+  {
+    "r1": -78,
+    "r2": -76,
+    "r3": -96,
+    "distance": 0,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T05:50:22.764Z"
+  },
+  {
+    "r1": -78,
+    "r2": -74,
+    "r3": -96,
+    "distance": 0,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T05:50:25.432Z"
+  },
+  {
+    "r1": -78,
+    "r2": -74,
+    "r3": -93,
+    "distance": 0,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T05:52:02.465Z"
+  },
+  {
+    "r1": -78,
+    "r2": -77,
+    "r3": -93,
+    "distance": 0,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T05:52:07.238Z"
+  },
+  {
+    "r1": -73,
+    "r2": -77,
+    "r3": -93,
+    "distance": 0,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T05:52:09.589Z"
+  },
+  {
+    "r1": -73,
+    "r2": -82,
+    "r3": -93,
+    "distance": 0,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T05:52:18.363Z"
+  },
+  {
+    "r1": -72,
+    "r2": -82,
+    "r3": -93,
+    "distance": 0,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T05:52:20.234Z"
+  },
+  {
+    "r1": -72,
+    "r2": -82,
+    "r3": -83,
+    "distance": 0,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T05:52:24.196Z"
+  },
+  {
+    "r1": -72,
+    "r2": -73,
+    "r3": -83,
+    "distance": 0,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T05:52:28.525Z"
+  },
+  {
+    "r1": -68,
+    "r2": -73,
+    "r3": -83,
+    "distance": 0,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T05:52:30.431Z"
+  },
+  {
+    "r1": -68,
+    "r2": -73,
+    "r3": -90,
+    "distance": 0,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T05:52:34.494Z"
+  },
+  {
+    "r1": -68,
+    "r2": -85,
+    "r3": -90,
+    "distance": 0,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T05:52:38.980Z"
+  },
+  {
+    "r1": -70,
+    "r2": -85,
+    "r3": -90,
+    "distance": 0,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T05:52:40.944Z"
+  },
+  {
+    "r1": -70,
+    "r2": -85,
+    "r3": -92,
+    "distance": 0,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T05:52:45.505Z"
+  },
+  {
+    "r1": -70,
+    "r2": -74,
+    "r3": -92,
+    "distance": 0,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T05:52:49.417Z"
+  },
+  {
+    "r1": -74,
+    "r2": -74,
+    "r3": -92,
+    "distance": 0,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T05:52:51.656Z"
+  },
+  {
+    "r1": -74,
+    "r2": -74,
+    "r3": -82,
+    "distance": 0,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T05:52:56.155Z"
+  },
+  {
+    "r1": -74,
+    "r2": -76,
+    "r3": -82,
+    "distance": 0,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T05:52:59.643Z"
+  },
+  {
+    "r1": -82,
+    "r2": -76,
+    "r3": -82,
+    "distance": 1,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T05:53:02.109Z"
+  },
+  {
+    "r1": -82,
+    "r2": -76,
+    "r3": -85,
+    "distance": 1,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T05:53:07.008Z"
+  },
+  {
+    "r1": -82,
+    "r2": -83,
+    "r3": -85,
+    "distance": 1,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T05:53:10.236Z"
+  },
+  {
+    "r1": -77,
+    "r2": -83,
+    "r3": -85,
+    "distance": 0,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T05:53:12.813Z"
+  },
+  {
+    "r1": -77,
+    "r2": -83,
+    "r3": -91,
+    "distance": 0,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T05:53:17.514Z"
+  },
+  {
+    "r1": -77,
+    "r2": -81,
+    "r3": -91,
+    "distance": 0,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T05:53:20.513Z"
+  },
+  {
+    "r1": -79,
+    "r2": -81,
+    "r3": -91,
+    "distance": 0,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T05:53:23.622Z"
+  },
+  {
+    "r1": -79,
+    "r2": -81,
+    "r3": -86,
+    "distance": 0,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T05:53:27.889Z"
+  },
+  {
+    "r1": -82,
+    "r2": -81,
+    "r3": -86,
+    "distance": 1,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T05:53:34.442Z"
+  },
+  {
+    "r1": -82,
+    "r2": -81,
+    "r3": -91,
+    "distance": 1,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T05:53:39.080Z"
+  },
+  {
+    "r1": -82,
+    "r2": -84,
+    "r3": -91,
+    "distance": 1,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T05:53:43.212Z"
+  },
+  {
+    "r1": -77,
+    "r2": -84,
+    "r3": -91,
+    "distance": 0,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T05:53:45.710Z"
+  },
+  {
+    "r1": -77,
+    "r2": -84,
+    "r3": -90,
+    "distance": 0,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T05:53:50.620Z"
+  },
+  {
+    "r1": -77,
+    "r2": -82,
+    "r3": -90,
+    "distance": 0,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T05:53:54.513Z"
+  },
+  {
+    "r1": -77,
+    "r2": -82,
+    "r3": -87,
+    "distance": 0,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T05:54:02.130Z"
+  },
+  {
+    "r1": -77,
+    "r2": -74,
+    "r3": -87,
+    "distance": 0,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T05:54:05.403Z"
+  },
+  {
+    "r1": -76,
+    "r2": -74,
+    "r3": -87,
+    "distance": 0,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T05:54:13.184Z"
+  },
+  {
+    "r1": -76,
+    "r2": -74,
+    "r3": -86,
+    "distance": 0,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T05:54:13.208Z"
+  },
+  {
+    "r1": -76,
+    "r2": -79,
+    "r3": -86,
+    "distance": 0,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T05:54:15.653Z"
+  },
+  {
+    "r1": -85,
+    "r2": -79,
+    "r3": -86,
+    "distance": 1,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T05:54:23.000Z"
+  },
+  {
+    "r1": -85,
+    "r2": -79,
+    "r3": -87,
+    "distance": 1,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T05:54:24.325Z"
+  },
+  {
+    "r1": -85,
+    "r2": -79,
+    "r3": -87,
+    "distance": 1,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T05:54:24.326Z"
+  },
+  {
+    "r1": -85,
+    "r2": -69,
+    "r3": -87,
+    "distance": 1,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T05:54:27.096Z"
+  },
+  {
+    "r1": -85,
+    "r2": -69,
+    "r3": -86,
+    "distance": 1,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T05:54:33.326Z"
+  },
+  {
+    "r1": -74,
+    "r2": -69,
+    "r3": -86,
+    "distance": 0,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T05:54:34.746Z"
+  },
+  {
+    "r1": -77,
+    "r2": -79,
+    "r3": -92,
+    "distance": 0,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T05:55:05.344Z"
+  },
+  {
+    "r1": -77,
+    "r2": -79,
+    "r3": -93,
+    "distance": 0,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T05:55:07.326Z"
+  },
+  {
+    "r1": -77,
+    "r2": -69,
+    "r3": -93,
+    "distance": 0,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T05:55:11.548Z"
+  },
+  {
+    "r1": -83,
+    "r2": -69,
+    "r3": -93,
+    "distance": 1,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T05:55:13.862Z"
+  },
+  {
+    "r1": -83,
+    "r2": -69,
+    "r3": -91,
+    "distance": 1,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T05:55:15.785Z"
+  },
+  {
+    "r1": -83,
+    "r2": -70,
+    "r3": -91,
+    "distance": 1,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T05:55:21.970Z"
+  },
+  {
+    "r1": -83,
+    "r2": -70,
+    "r3": -88,
+    "distance": 1,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T05:55:26.875Z"
+  },
+  {
+    "r1": -83,
+    "r2": -75,
+    "r3": -88,
+    "distance": 1,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T05:55:32.161Z"
+  },
+  {
+    "r1": -86,
+    "r2": -75,
+    "r3": -88,
+    "distance": 1,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T05:55:34.251Z"
+  },
+  {
+    "r1": -86,
+    "r2": -75,
+    "r3": -90,
+    "distance": 1,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T05:55:37.081Z"
+  },
+  {
+    "r1": -86,
+    "r2": -81,
+    "r3": -90,
+    "distance": 1,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T05:55:42.403Z"
+  },
+  {
+    "r1": -82,
+    "r2": -81,
+    "r3": -90,
+    "distance": 1,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T05:55:43.824Z"
+  },
+  {
+    "r1": -82,
+    "r2": -81,
+    "r3": -93,
+    "distance": 1,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T05:55:47.391Z"
+  },
+  {
+    "r1": -82,
+    "r2": -70,
+    "r3": -93,
+    "distance": 1,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T05:55:52.909Z"
+  },
+  {
+    "r1": -85,
+    "r2": -70,
+    "r3": -93,
+    "distance": 1,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T05:55:53.835Z"
+  },
+  {
+    "r1": -85,
+    "r2": -70,
+    "r3": -92,
+    "distance": 1,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T05:55:58.040Z"
+  },
+  {
+    "r1": -86,
+    "r2": -70,
+    "r3": -92,
+    "distance": 7,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T05:56:03.813Z"
+  },
+  {
+    "r1": -86,
+    "r2": -70,
+    "r3": -86,
+    "distance": 7,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T05:56:08.734Z"
+  },
+  {
+    "r1": -86,
+    "r2": -69,
+    "r3": -86,
+    "distance": 7,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T05:56:12.715Z"
+  },
+  {
+    "r1": -84,
+    "r2": -69,
+    "r3": -86,
+    "distance": 1,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T05:56:14.115Z"
+  },
+  {
+    "r1": -84,
+    "r2": -69,
+    "r3": -90,
+    "distance": 1,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T05:56:19.323Z"
+  },
+  {
+    "r1": -84,
+    "r2": -71,
+    "r3": -90,
+    "distance": 1,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T05:56:23.028Z"
+  },
+  {
+    "r1": -83,
+    "r2": -71,
+    "r3": -90,
+    "distance": 1,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T05:56:24.949Z"
+  },
+  {
+    "r1": -83,
+    "r2": -71,
+    "r3": -88,
+    "distance": 1,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T05:56:29.771Z"
+  },
+  {
+    "r1": -83,
+    "r2": -77,
+    "r3": -88,
+    "distance": 1,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T05:56:33.249Z"
+  },
+  {
+    "r1": -83,
+    "r2": -77,
+    "r3": -91,
+    "distance": 1,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T05:56:40.013Z"
+  },
+  {
+    "r1": -84,
+    "r2": -77,
+    "r3": -91,
+    "distance": 1,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T05:56:45.532Z"
+  },
+  {
+    "r1": -84,
+    "r2": -74,
+    "r3": -91,
+    "distance": 1,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T05:56:47.363Z"
+  },
+  {
+    "r1": -83,
+    "r2": -74,
+    "r3": -91,
+    "distance": 1,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T05:56:55.373Z"
+  },
+  {
+    "r1": -83,
+    "r2": -72,
+    "r3": -91,
+    "distance": 1,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T05:56:57.619Z"
+  },
+  {
+    "r1": -83,
+    "r2": -72,
+    "r3": -94,
+    "distance": 1,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T05:57:00.903Z"
+  },
+  {
+    "r1": -80,
+    "r2": -72,
+    "r3": -94,
+    "distance": 1,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T05:57:05.826Z"
+  },
+  {
+    "r1": -80,
+    "r2": -72,
+    "r3": -90,
+    "distance": 1,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T05:57:10.938Z"
+  },
+  {
+    "r1": -78,
+    "r2": -72,
+    "r3": -90,
+    "distance": 0,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T05:57:15.853Z"
+  },
+  {
+    "r1": -78,
+    "r2": -69,
+    "r3": -90,
+    "distance": 0,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T05:57:18.111Z"
+  },
+  {
+    "r1": -81,
+    "r2": -69,
+    "r3": -90,
+    "distance": 1,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T05:57:26.299Z"
+  },
+  {
+    "r1": -81,
+    "r2": -79,
+    "r3": -90,
+    "distance": 1,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T05:57:27.975Z"
+  },
+  {
+    "r1": -81,
+    "r2": -79,
+    "r3": -87,
+    "distance": 1,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T05:57:32.446Z"
+  },
+  {
+    "r1": -79,
+    "r2": -79,
+    "r3": -87,
+    "distance": 1,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T05:57:36.967Z"
+  },
+  {
+    "r1": -79,
+    "r2": -79,
+    "r3": -87,
+    "distance": 0,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T05:57:47.161Z"
+  },
+  {
+    "r1": -78,
+    "r2": -80,
+    "r3": -89,
+    "distance": 0,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T05:58:11.649Z"
+  },
+  {
+    "r1": -78,
+    "r2": -76,
+    "r3": -89,
+    "distance": 0,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T05:58:16.252Z"
+  },
+  {
+    "r1": -78,
+    "r2": -76,
+    "r3": -84,
+    "distance": 0,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T05:58:17.583Z"
+  },
+  {
+    "r1": -78,
+    "r2": -75,
+    "r3": -84,
+    "distance": 0,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T05:58:26.777Z"
+  },
+  {
+    "r1": -87,
+    "r2": -75,
+    "r3": -84,
+    "distance": 1,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T05:58:29.111Z"
+  },
+  {
+    "r1": -87,
+    "r2": -75,
+    "r3": -89,
+    "distance": 1,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T05:58:33.039Z"
+  },
+  {
+    "r1": -87,
+    "r2": -76,
+    "r3": -89,
+    "distance": 1,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T05:58:40.200Z"
+  },
+  {
+    "r1": -83,
+    "r2": -76,
+    "r3": -89,
+    "distance": 1,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T05:58:41.317Z"
+  },
+  {
+    "r1": -83,
+    "r2": -76,
+    "r3": -91,
+    "distance": 1,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T05:58:54.512Z"
+  },
+  {
+    "r1": -82,
+    "r2": -76,
+    "r3": -91,
+    "distance": 1,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T05:59:00.843Z"
+  },
+  {
+    "r1": -82,
+    "r2": -76,
+    "r3": -84,
+    "distance": 1,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T05:59:04.972Z"
+  },
+  {
+    "r1": -82,
+    "r2": -82,
+    "r3": -84,
+    "distance": 1,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T05:59:08.104Z"
+  },
+  {
+    "r1": -82,
+    "r2": -82,
+    "r3": -90,
+    "distance": 1,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T05:59:18.207Z"
+  },
+  {
+    "r1": -82,
+    "r2": -82,
+    "r3": -88,
+    "distance": 1,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T05:59:28.423Z"
+  },
+  {
+    "r1": -79,
+    "r2": -77,
+    "r3": -88,
+    "distance": 0,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T05:59:30.950Z"
+  },
+  {
+    "r1": -79,
+    "r2": -82,
+    "r3": -88,
+    "distance": 0,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T05:59:30.960Z"
+  },
+  {
+    "r1": -79,
+    "r2": -77,
+    "r3": -81,
+    "distance": 0,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T05:59:39.771Z"
+  },
+  {
+    "r1": -85,
+    "r2": -77,
+    "r3": -81,
+    "distance": 2,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T05:59:42.227Z"
+  },
+  {
+    "r1": -85,
+    "r2": -77,
+    "r3": -81,
+    "distance": 2,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T05:59:42.230Z"
+  },
+  {
+    "r1": -85,
+    "r2": -77,
+    "r3": -85,
+    "distance": 2,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T05:59:49.832Z"
+  },
+  {
+    "r1": -83,
+    "r2": -77,
+    "r3": -85,
+    "distance": 1,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T05:59:52.021Z"
+  },
+  {
+    "r1": -83,
+    "r2": -77,
+    "r3": -85,
+    "distance": 1,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T05:59:52.024Z"
+  },
+  {
+    "r1": -83,
+    "r2": -74,
+    "r3": -85,
+    "distance": 1,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T05:59:52.059Z"
+  },
+  {
+    "r1": -85,
+    "r2": -74,
+    "r3": -85,
+    "distance": 1,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T05:59:59.874Z"
+  },
+  {
+    "r1": -85,
+    "r2": -74,
+    "r3": -88,
+    "distance": 1,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T06:00:02.113Z"
+  },
+  {
+    "r1": -85,
+    "r2": -74,
+    "r3": -88,
+    "distance": 1,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T06:00:02.114Z"
+  },
+  {
+    "r1": -85,
+    "r2": -79,
+    "r3": -88,
+    "distance": 1,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T06:00:12.664Z"
+  },
+  {
+    "r1": -85,
+    "r2": -79,
+    "r3": -82,
+    "distance": 1,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T06:00:20.148Z"
+  },
+  {
+    "r1": -83,
+    "r2": -79,
+    "r3": -82,
+    "distance": 1,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T06:00:22.383Z"
+  },
+  {
+    "r1": -83,
+    "r2": -73,
+    "r3": -82,
+    "distance": 1,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T06:00:24.017Z"
+  },
+  {
+    "r1": -83,
+    "r2": -73,
+    "r3": -90,
+    "distance": 1,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T06:00:32.352Z"
+  },
+  {
+    "r1": -83,
+    "r2": -74,
+    "r3": -90,
+    "distance": 1,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T06:00:34.859Z"
+  },
+  {
+    "r1": -83,
+    "r2": -74,
+    "r3": -83,
+    "distance": 1,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T06:00:42.290Z"
+  },
+  {
+    "r1": -83,
+    "r2": -76,
+    "r3": -83,
+    "distance": 1,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T06:00:45.357Z"
+  },
+  {
+    "r1": -83,
+    "r2": -76,
+    "r3": -89,
+    "distance": 1,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T06:00:53.671Z"
+  },
+  {
+    "r1": -83,
+    "r2": -78,
+    "r3": -89,
+    "distance": 1,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T06:00:55.691Z"
+  },
+  {
+    "r1": -83,
+    "r2": -71,
+    "r3": -89,
+    "distance": 1,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T06:01:06.017Z"
+  },
+  {
+    "r1": -84,
+    "r2": -71,
+    "r3": -89,
+    "distance": 5,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T06:01:12.192Z"
+  },
+  {
+    "r1": -84,
+    "r2": -83,
+    "r3": -89,
+    "distance": 5,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T06:01:16.499Z"
+  },
+  {
+    "r1": -84,
+    "r2": -83,
+    "r3": -90,
+    "distance": 5,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T06:01:19.051Z"
+  },
+  {
+    "r1": -83,
+    "r2": -78,
+    "r3": -88,
+    "distance": 1,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T06:01:52.001Z"
+  },
+  {
+    "r1": -88,
+    "r2": -78,
+    "r3": -88,
+    "distance": 1,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T06:01:56.694Z"
+  },
+  {
+    "r1": -88,
+    "r2": -78,
+    "r3": -93,
+    "distance": 1,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T06:01:59.358Z"
+  },
+  {
+    "r1": -88,
+    "r2": -77,
+    "r3": -93,
+    "distance": 1,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T06:01:59.379Z"
+  },
+  {
+    "r1": -88,
+    "r2": -77,
+    "r3": -93,
+    "distance": 1,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T06:02:01.054Z"
+  },
+  {
+    "r1": -84,
+    "r2": -77,
+    "r3": -93,
+    "distance": 1,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T06:02:06.464Z"
+  },
+  {
+    "r1": -84,
+    "r2": -77,
+    "r3": -92,
+    "distance": 1,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T06:02:08.501Z"
+  },
+  {
+    "r1": -84,
+    "r2": -72,
+    "r3": -92,
+    "distance": 1,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T06:02:08.533Z"
+  },
+  {
+    "r1": -87,
+    "r2": -72,
+    "r3": -92,
+    "distance": 2,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T06:02:16.507Z"
+  },
+  {
+    "r1": -87,
+    "r2": -72,
+    "r3": -95,
+    "distance": 2,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T06:02:19.077Z"
+  },
+  {
+    "r1": -83,
+    "r2": -72,
+    "r3": -95,
+    "distance": 1,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T06:02:26.961Z"
+  },
+  {
+    "r1": -83,
+    "r2": -74,
+    "r3": -95,
+    "distance": 1,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T06:02:28.851Z"
+  },
+  {
+    "r1": -83,
+    "r2": -74,
+    "r3": -91,
+    "distance": 1,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T06:02:30.616Z"
+  },
+  {
+    "r1": -83,
+    "r2": -75,
+    "r3": -91,
+    "distance": 1,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T06:02:39.833Z"
+  },
+  {
+    "r1": -83,
+    "r2": -75,
+    "r3": -92,
+    "distance": 1,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T06:02:41.889Z"
+  },
+  {
+    "r1": -83,
+    "r2": -73,
+    "r3": -92,
+    "distance": 1,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T06:02:49.858Z"
+  },
+  {
+    "r1": -79,
+    "r2": -73,
+    "r3": -92,
+    "distance": 0,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T06:02:52.480Z"
+  },
+  {
+    "r1": -79,
+    "r2": -73,
+    "r3": -91,
+    "distance": 0,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T06:02:52.484Z"
+  },
+  {
+    "r1": -79,
+    "r2": -73,
+    "r3": -92,
+    "distance": 0,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T06:02:52.487Z"
+  },
+  {
+    "r1": -79,
+    "r2": -76,
+    "r3": -91,
+    "distance": 0,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T06:02:59.908Z"
+  },
+  {
+    "r1": -85,
+    "r2": -76,
+    "r3": -91,
+    "distance": 1,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T06:03:02.351Z"
+  },
+  {
+    "r1": -85,
+    "r2": -76,
+    "r3": -93,
+    "distance": 1,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T06:03:04.480Z"
+  },
+  {
+    "r1": -85,
+    "r2": -81,
+    "r3": -93,
+    "distance": 1,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T06:03:10.548Z"
+  },
+  {
+    "r1": -81,
+    "r2": -81,
+    "r3": -93,
+    "distance": 1,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T06:03:12.672Z"
+  },
+  {
+    "r1": -81,
+    "r2": -81,
+    "r3": -84,
+    "distance": 1,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T06:03:16.414Z"
+  },
+  {
+    "r1": -81,
+    "r2": -73,
+    "r3": -84,
+    "distance": 1,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T06:03:20.808Z"
+  },
+  {
+    "r1": -84,
+    "r2": -73,
+    "r3": -84,
+    "distance": 1,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T06:03:22.416Z"
+  },
+  {
+    "r1": -84,
+    "r2": -73,
+    "r3": -91,
+    "distance": 1,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T06:03:27.770Z"
+  },
+  {
+    "r1": -82,
+    "r2": -73,
+    "r3": -91,
+    "distance": 1,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T06:03:32.878Z"
+  },
+  {
+    "r1": -82,
+    "r2": -71,
+    "r3": -91,
+    "distance": 1,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T06:03:35.017Z"
+  },
+  {
+    "r1": -82,
+    "r2": -71,
+    "r3": -86,
+    "distance": 1,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T06:03:38.007Z"
+  },
+  {
+    "r1": -82,
+    "r2": -79,
+    "r3": -86,
+    "distance": 1,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T06:03:43.901Z"
+  },
+  {
+    "r1": -83,
+    "r2": -79,
+    "r3": -86,
+    "distance": 1,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T06:03:43.927Z"
+  },
+  {
+    "r1": -83,
+    "r2": -79,
+    "r3": -91,
+    "distance": 1,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T06:03:49.135Z"
+  },
+  {
+    "r1": -92,
+    "r2": -79,
+    "r3": -91,
+    "distance": 4,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T06:03:54.371Z"
+  },
+  {
+    "r1": -92,
+    "r2": -76,
+    "r3": -91,
+    "distance": 4,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T06:03:54.398Z"
+  },
+  {
+    "r1": -84,
+    "r2": -76,
+    "r3": -91,
+    "distance": 1,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T06:04:04.418Z"
+  },
+  {
+    "r1": -84,
+    "r2": -76,
+    "r3": -87,
+    "distance": 1,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T06:04:09.892Z"
+  },
+  {
+    "r1": -84,
+    "r2": -76,
+    "r3": -87,
+    "distance": 3,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T06:04:14.512Z"
+  },
+  {
+    "r1": -84,
+    "r2": -79,
+    "r3": -87,
+    "distance": 3,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T06:04:15.683Z"
+  },
+  {
+    "r1": -89,
+    "r2": -76,
+    "r3": -80,
+    "distance": 4,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T06:05:35.452Z"
+  },
+  {
+    "r1": -93,
+    "r2": -76,
+    "r3": -80,
+    "distance": 4,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T06:05:38.684Z"
+  },
+  {
+    "r1": -93,
+    "r2": -76,
+    "r3": -81,
+    "distance": 4,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T06:05:40.992Z"
+  },
+  {
+    "r1": -93,
+    "r2": -79,
+    "r3": -81,
+    "distance": 4,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T06:05:41.030Z"
+  },
+  {
+    "r1": -84,
+    "r2": -79,
+    "r3": -81,
+    "distance": 1,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T06:05:47.174Z"
+  },
+  {
+    "r1": -84,
+    "r2": -75,
+    "r3": -81,
+    "distance": 1,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T06:05:51.141Z"
+  },
+  {
+    "r1": -84,
+    "r2": -75,
+    "r3": -81,
+    "distance": 1,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T06:05:51.189Z"
+  },
+  {
+    "r1": -86,
+    "r2": -75,
+    "r3": -81,
+    "distance": 2,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T06:05:58.481Z"
+  },
+  {
+    "r1": -86,
+    "r2": -75,
+    "r3": -78,
+    "distance": 2,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T06:06:01.757Z"
+  },
+  {
+    "r1": -86,
+    "r2": -77,
+    "r3": -78,
+    "distance": 2,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T06:06:04.124Z"
+  },
+  {
+    "r1": -86,
+    "r2": -77,
+    "r3": -78,
+    "distance": 2,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T06:06:04.126Z"
+  },
+  {
+    "r1": -91,
+    "r2": -77,
+    "r3": -78,
+    "distance": 3,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T06:06:08.323Z"
+  },
+  {
+    "r1": -91,
+    "r2": -77,
+    "r3": -75,
+    "distance": 3,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T06:06:12.015Z"
+  },
+  {
+    "r1": -88,
+    "r2": -77,
+    "r3": -75,
+    "distance": 2,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T06:06:21.091Z"
+  },
+  {
+    "r1": -88,
+    "r2": -77,
+    "r3": -76,
+    "distance": 2,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T06:06:22.314Z"
+  },
+  {
+    "r1": -94,
+    "r2": -77,
+    "r3": -76,
+    "distance": 2,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T06:06:34.273Z"
+  },
+  {
+    "r1": -94,
+    "r2": -84,
+    "r3": -76,
+    "distance": 2,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T06:06:37.353Z"
+  },
+  {
+    "r1": -94,
+    "r2": -84,
+    "r3": -74,
+    "distance": 2,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T06:06:42.187Z"
+  },
+  {
+    "r1": -94,
+    "r2": -84,
+    "r3": -77,
+    "distance": 2,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T06:06:52.746Z"
+  },
+  {
+    "r1": -94,
+    "r2": -84,
+    "r3": -81,
+    "distance": 2,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T06:07:02.802Z"
+  },
+  {
+    "r1": -94,
+    "r2": -79,
+    "r3": -81,
+    "distance": 2,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T06:07:04.245Z"
+  },
+  {
+    "r1": -93,
+    "r2": -79,
+    "r3": -81,
+    "distance": 5,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T06:07:11.623Z"
+  },
+  {
+    "r1": -93,
+    "r2": -79,
+    "r3": -80,
+    "distance": 5,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T06:07:13.405Z"
+  },
+  {
+    "r1": -93,
+    "r2": -77,
+    "r3": -80,
+    "distance": 5,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T06:07:16.511Z"
+  },
+  {
+    "r1": -93,
+    "r2": -77,
+    "r3": -78,
+    "distance": 5,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T06:07:23.904Z"
+  },
+  {
+    "r1": -89,
+    "r2": -77,
+    "r3": -78,
+    "distance": 2,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T06:07:25.775Z"
+  },
+  {
+    "r1": -89,
+    "r2": -79,
+    "r3": -78,
+    "distance": 2,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T06:07:28.401Z"
+  },
+  {
+    "r1": -89,
+    "r2": -79,
+    "r3": -81,
+    "distance": 2,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T06:07:34.335Z"
+  },
+  {
+    "r1": -89,
+    "r2": -79,
+    "r3": -79,
+    "distance": 2,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T06:07:45.541Z"
+  },
+  {
+    "r1": -90,
+    "r2": -79,
+    "r3": -79,
+    "distance": 3,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T06:07:47.814Z"
+  },
+  {
+    "r1": -90,
+    "r2": -77,
+    "r3": -79,
+    "distance": 3,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T06:07:47.818Z"
+  },
+  {
+    "r1": -90,
+    "r2": -79,
+    "r3": -79,
+    "distance": 3,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T06:07:47.821Z"
+  },
+  {
+    "r1": -90,
+    "r2": -77,
+    "r3": -70,
+    "distance": 3,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T06:07:55.791Z"
+  },
+  {
+    "r1": -88,
+    "r2": -77,
+    "r3": -70,
+    "distance": 2,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T06:07:59.037Z"
+  },
+  {
+    "r1": -88,
+    "r2": -77,
+    "r3": -84,
+    "distance": 2,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T06:08:06.253Z"
+  },
+  {
+    "r1": -90,
+    "r2": -77,
+    "r3": -84,
+    "distance": 3,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T06:08:12.889Z"
+  },
+  {
+    "r1": -90,
+    "r2": -77,
+    "r3": -69,
+    "distance": 3,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T06:08:16.490Z"
+  },
+  {
+    "r1": -90,
+    "r2": -78,
+    "r3": -69,
+    "distance": 3,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T06:08:18.802Z"
+  },
+  {
+    "r1": -90,
+    "r2": -78,
+    "r3": -77,
+    "distance": 3,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T06:08:27.587Z"
+  },
+  {
+    "r1": -90,
+    "r2": -78,
+    "r3": -77,
+    "distance": 1,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T06:08:32.647Z"
+  },
+  {
+    "r1": -88,
+    "r2": -81,
+    "r3": -71,
+    "distance": 6,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T06:08:47.197Z"
+  },
+  {
+    "r1": -88,
+    "r2": -81,
+    "r3": -73,
+    "distance": 6,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T06:08:48.545Z"
+  },
+  {
+    "r1": -88,
+    "r2": -77,
+    "r3": -73,
+    "distance": 6,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T06:08:51.678Z"
+  },
+  {
+    "r1": -92,
+    "r2": -77,
+    "r3": -73,
+    "distance": 3,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T06:09:01.734Z"
+  },
+  {
+    "r1": -92,
+    "r2": -77,
+    "r3": -78,
+    "distance": 3,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T06:09:09.518Z"
+  },
+  {
+    "r1": -93,
+    "r2": -77,
+    "r3": -78,
+    "distance": 1,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T06:09:13.783Z"
+  },
+  {
+    "r1": -93,
+    "r2": -78,
+    "r3": -78,
+    "distance": 1,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T06:09:16.228Z"
+  },
+  {
+    "r1": -93,
+    "r2": -78,
+    "r3": -73,
+    "distance": 1,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T06:09:20.370Z"
+  },
+  {
+    "r1": -93,
+    "r2": -79,
+    "r3": -73,
+    "distance": 1,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T06:09:25.943Z"
+  },
+  {
+    "r1": -85,
+    "r2": -79,
+    "r3": -73,
+    "distance": 1,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T06:09:27.377Z"
+  },
+  {
+    "r1": -85,
+    "r2": -79,
+    "r3": -79,
+    "distance": 1,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T06:09:31.440Z"
+  },
+  {
+    "r1": -85,
+    "r2": -73,
+    "r3": -79,
+    "distance": 1,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T06:09:37.037Z"
+  },
+  {
+    "r1": -92,
+    "r2": -73,
+    "r3": -79,
+    "distance": 7,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T06:09:39.511Z"
+  },
+  {
+    "r1": -92,
+    "r2": -73,
+    "r3": -83,
+    "distance": 7,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T06:09:42.913Z"
+  },
+  {
+    "r1": -92,
+    "r2": -76,
+    "r3": -83,
+    "distance": 7,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T06:09:47.877Z"
+  },
+  {
+    "r1": -91,
+    "r2": -76,
+    "r3": -83,
+    "distance": 3,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T06:09:50.482Z"
+  },
+  {
+    "r1": -91,
+    "r2": -76,
+    "r3": -83,
+    "distance": 3,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T06:09:50.484Z"
+  },
+  {
+    "r1": -91,
+    "r2": -76,
+    "r3": -80,
+    "distance": 3,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T06:09:54.162Z"
+  },
+  {
+    "r1": -91,
+    "r2": -79,
+    "r3": -80,
+    "distance": 3,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T06:09:57.680Z"
+  },
+  {
+    "r1": -91,
+    "r2": -79,
+    "r3": -85,
+    "distance": 3,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T06:10:05.216Z"
+  },
+  {
+    "r1": -91,
+    "r2": -81,
+    "r3": -85,
+    "distance": 3,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T06:10:08.537Z"
+  },
+  {
+    "r1": -89,
+    "r2": -81,
+    "r3": -85,
+    "distance": 6,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T06:10:10.765Z"
+  },
+  {
+    "r1": -89,
+    "r2": -81,
+    "r3": -85,
+    "distance": 6,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T06:10:10.776Z"
+  },
+  {
+    "r1": -89,
+    "r2": -81,
+    "r3": -84,
+    "distance": 6,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T06:10:16.339Z"
+  },
+  {
+    "r1": -89,
+    "r2": -80,
+    "r3": -84,
+    "distance": 6,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T06:10:18.981Z"
+  },
+  {
+    "r1": -90,
+    "r2": -80,
+    "r3": -84,
+    "distance": 3,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T06:10:21.337Z"
+  },
+  {
+    "r1": -90,
+    "r2": -80,
+    "r3": -84,
+    "distance": 3,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T06:10:21.343Z"
+  },
+  {
+    "r1": -90,
+    "r2": -80,
+    "r3": -83,
+    "distance": 3,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T06:10:26.962Z"
+  },
+  {
+    "r1": -89,
+    "r2": -80,
+    "r3": -83,
+    "distance": 5,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T06:10:29.446Z"
+  },
+  {
+    "r1": -89,
+    "r2": -78,
+    "r3": -83,
+    "distance": 5,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T06:10:30.833Z"
+  },
+  {
+    "r1": -89,
+    "r2": -78,
+    "r3": -77,
+    "distance": 5,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T06:10:37.694Z"
+  },
+  {
+    "r1": -94,
+    "r2": -78,
+    "r3": -77,
+    "distance": 5,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T06:10:39.691Z"
+  },
+  {
+    "r1": -94,
+    "r2": -79,
+    "r3": -77,
+    "distance": 5,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T06:10:41.922Z"
+  },
+  {
+    "r1": -94,
+    "r2": -79,
+    "r3": -78,
+    "distance": 5,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T06:10:48.595Z"
+  },
+  {
+    "r1": -94,
+    "r2": -79,
+    "r3": -78,
+    "distance": 3,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T06:10:50.701Z"
+  },
+  {
+    "r1": -94,
+    "r2": -74,
+    "r3": -78,
+    "distance": 3,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T06:10:52.371Z"
+  },
+  {
+    "r1": -94,
+    "r2": -74,
+    "r3": -81,
+    "distance": 3,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T06:10:59.133Z"
+  },
+  {
+    "r1": -89,
+    "r2": -74,
+    "r3": -81,
+    "distance": 2,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T06:11:01.157Z"
+  },
+  {
+    "r1": -89,
+    "r2": -75,
+    "r3": -81,
+    "distance": 2,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T06:11:10.564Z"
+  },
+  {
+    "r1": -90,
+    "r2": -75,
+    "r3": -81,
+    "distance": 3,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T06:11:13.164Z"
+  },
+  {
+    "r1": -75,
+    "r2": -78,
+    "r3": -92,
+    "distance": 0,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T06:31:45.311Z"
+  },
+  {
+    "r1": -75,
+    "r2": -78,
+    "r3": -94,
+    "distance": 0,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T06:31:48.595Z"
+  },
+  {
+    "r1": -75,
+    "r2": -76,
+    "r3": -94,
+    "distance": 0,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T06:31:51.248Z"
+  },
+  {
+    "r1": -75,
+    "r2": -76,
+    "r3": -94,
+    "distance": 0,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T06:31:51.252Z"
+  },
+  {
+    "r1": -69,
+    "r2": -76,
+    "r3": -94,
+    "distance": 0,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T06:31:53.941Z"
+  },
+  {
+    "r1": -69,
+    "r2": -76,
+    "r3": -91,
+    "distance": 0,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T06:31:58.896Z"
+  },
+  {
+    "r1": -69,
+    "r2": -72,
+    "r3": -91,
+    "distance": 0,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T06:31:58.920Z"
+  },
+  {
+    "r1": -70,
+    "r2": -72,
+    "r3": -91,
+    "distance": 0,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T06:32:03.176Z"
+  },
+  {
+    "r1": -70,
+    "r2": -70,
+    "r3": -91,
+    "distance": 0,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T06:32:09.113Z"
+  },
+  {
+    "r1": -70,
+    "r2": -70,
+    "r3": -92,
+    "distance": 0,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T06:32:10.701Z"
+  },
+  {
+    "r1": -70,
+    "r2": -70,
+    "r3": -92,
+    "distance": 0,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T06:32:10.705Z"
+  },
+  {
+    "r1": -76,
+    "r2": -70,
+    "r3": -92,
+    "distance": 0,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T06:32:17.493Z"
+  },
+  {
+    "r1": -76,
+    "r2": -77,
+    "r3": -92,
+    "distance": 0,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T06:32:19.568Z"
+  },
+  {
+    "r1": -76,
+    "r2": -77,
+    "r3": -91,
+    "distance": 0,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T06:32:22.224Z"
+  },
+  {
+    "r1": -76,
+    "r2": -73,
+    "r3": -91,
+    "distance": 0,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T06:32:29.985Z"
+  },
+  {
+    "r1": -76,
+    "r2": -73,
+    "r3": -88,
+    "distance": 0,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T06:32:31.979Z"
+  },
+  {
+    "r1": -76,
+    "r2": -73,
+    "r3": -88,
+    "distance": 0,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T06:32:31.983Z"
+  },
+  {
+    "r1": -75,
+    "r2": -73,
+    "r3": -88,
+    "distance": 0,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T06:32:35.308Z"
+  },
+  {
+    "r1": -75,
+    "r2": -80,
+    "r3": -88,
+    "distance": 0,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T06:32:39.399Z"
+  },
+  {
+    "r1": -75,
+    "r2": -80,
+    "r3": -89,
+    "distance": 0,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T06:32:42.095Z"
+  },
+  {
+    "r1": -75,
+    "r2": -73,
+    "r3": -89,
+    "distance": 0,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T06:32:50.300Z"
+  },
+  {
+    "r1": -91,
+    "r2": -77,
+    "r3": -85,
+    "distance": 3,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T06:34:04.519Z"
+  },
+  {
+    "r1": -91,
+    "r2": -70,
+    "r3": -85,
+    "distance": 3,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T06:34:07.612Z"
+  },
+  {
+    "r1": -91,
+    "r2": -70,
+    "r3": -87,
+    "distance": 3,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T06:34:09.490Z"
+  },
+  {
+    "r1": -91,
+    "r2": -70,
+    "r3": -87,
+    "distance": 6,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T06:34:12.027Z"
+  },
+  {
+    "r1": -91,
+    "r2": -72,
+    "r3": -87,
+    "distance": 6,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T06:34:15.166Z"
+  },
+  {
+    "r1": -91,
+    "r2": -72,
+    "r3": -92,
+    "distance": 6,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T06:34:19.569Z"
+  },
+  {
+    "r1": -87,
+    "r2": -72,
+    "r3": -92,
+    "distance": 2,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T06:34:22.126Z"
+  },
+  {
+    "r1": -87,
+    "r2": -71,
+    "r3": -92,
+    "distance": 2,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T06:34:25.210Z"
+  },
+  {
+    "r1": -87,
+    "r2": -71,
+    "r3": -91,
+    "distance": 2,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T06:34:30.426Z"
+  },
+  {
+    "r1": -89,
+    "r2": -71,
+    "r3": -91,
+    "distance": 2,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T06:34:32.426Z"
+  },
+  {
+    "r1": -89,
+    "r2": -71,
+    "r3": -91,
+    "distance": 2,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T06:34:32.431Z"
+  },
+  {
+    "r1": -89,
+    "r2": -71,
+    "r3": -91,
+    "distance": 2,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T06:34:36.216Z"
+  },
+  {
+    "r1": -89,
+    "r2": -72,
+    "r3": -91,
+    "distance": 2,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T06:34:36.236Z"
+  },
+  {
+    "r1": -89,
+    "r2": -72,
+    "r3": -91,
+    "distance": 2,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T06:34:37.545Z"
+  },
+  {
+    "r1": -89,
+    "r2": -72,
+    "r3": -92,
+    "distance": 2,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T06:34:40.608Z"
+  },
+  {
+    "r1": -91,
+    "r2": -72,
+    "r3": -92,
+    "distance": 3,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T06:34:42.097Z"
+  },
+  {
+    "r1": -91,
+    "r2": -72,
+    "r3": -90,
+    "distance": 3,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T06:34:50.687Z"
+  },
+  {
+    "r1": -83,
+    "r2": -72,
+    "r3": -90,
+    "distance": 1,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T06:34:52.936Z"
+  },
+  {
+    "r1": -83,
+    "r2": -86,
+    "r3": -90,
+    "distance": 1,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T06:35:07.245Z"
+  },
+  {
+    "r1": -93,
+    "r2": -86,
+    "r3": -90,
+    "distance": 4,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T06:35:13.625Z"
+  },
+  {
+    "r1": -93,
+    "r2": -70,
+    "r3": -90,
+    "distance": 4,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T06:35:17.944Z"
+  },
+  {
+    "r1": -88,
+    "r2": -73,
+    "r3": -86,
+    "distance": 3,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T06:37:58.320Z"
+  },
+  {
+    "r1": -88,
+    "r2": -73,
+    "r3": -92,
+    "distance": 3,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T06:38:02.386Z"
+  },
+  {
+    "r1": -93,
+    "r2": -73,
+    "r3": -92,
+    "distance": 4,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T06:38:07.691Z"
+  },
+  {
+    "r1": -93,
+    "r2": -82,
+    "r3": -92,
+    "distance": 4,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T06:38:10.032Z"
+  },
+  {
+    "r1": -93,
+    "r2": -82,
+    "r3": -92,
+    "distance": 4,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T06:38:10.036Z"
+  },
+  {
+    "r1": -93,
+    "r2": -82,
+    "r3": -86,
+    "distance": 4,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T06:38:13.177Z"
+  },
+  {
+    "r1": -83,
+    "r2": -82,
+    "r3": -86,
+    "distance": 1,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T06:38:18.721Z"
+  },
+  {
+    "r1": -83,
+    "r2": -82,
+    "r3": -88,
+    "distance": 1,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T06:38:23.315Z"
+  },
+  {
+    "r1": -83,
+    "r2": -80,
+    "r3": -88,
+    "distance": 1,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T06:38:28.611Z"
+  },
+  {
+    "r1": -86,
+    "r2": -80,
+    "r3": -88,
+    "distance": 1,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T06:38:28.630Z"
+  },
+  {
+    "r1": -86,
+    "r2": -80,
+    "r3": -88,
+    "distance": 1,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T06:38:32.832Z"
+  },
+  {
+    "r1": -86,
+    "r2": -78,
+    "r3": -88,
+    "distance": 1,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T06:38:38.680Z"
+  },
+  {
+    "r1": -86,
+    "r2": -78,
+    "r3": -88,
+    "distance": 1,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T06:38:38.704Z"
+  },
+  {
+    "r1": -86,
+    "r2": -78,
+    "r3": -81,
+    "distance": 1,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T06:38:44.102Z"
+  },
+  {
+    "r1": -86,
+    "r2": -78,
+    "r3": -81,
+    "distance": 3,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T06:38:48.916Z"
+  },
+  {
+    "r1": -86,
+    "r2": -71,
+    "r3": -81,
+    "distance": 3,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T06:38:51.177Z"
+  },
+  {
+    "r1": -86,
+    "r2": -71,
+    "r3": -83,
+    "distance": 3,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T06:38:54.762Z"
+  },
+  {
+    "r1": -86,
+    "r2": -71,
+    "r3": -83,
+    "distance": 1,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T06:38:59.310Z"
+  },
+  {
+    "r1": -86,
+    "r2": -71,
+    "r3": -84,
+    "distance": 1,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T06:39:05.694Z"
+  },
+  {
+    "r1": -86,
+    "r2": -80,
+    "r3": -84,
+    "distance": 1,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T06:39:10.773Z"
+  },
+  {
+    "r1": -91,
+    "r2": -82,
+    "r3": -77,
+    "distance": 2,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T06:41:01.807Z"
+  },
+  {
+    "r1": -84,
+    "r2": -82,
+    "r3": -77,
+    "distance": 1,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T06:41:05.147Z"
+  },
+  {
+    "r1": -84,
+    "r2": -91,
+    "r3": -77,
+    "distance": 1,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T06:41:07.779Z"
+  },
+  {
+    "r1": -84,
+    "r2": -91,
+    "r3": -76,
+    "distance": 1,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T06:41:11.415Z"
+  },
+  {
+    "r1": -92,
+    "r2": -91,
+    "r3": -76,
+    "distance": 5,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T06:41:16.347Z"
+  },
+  {
+    "r1": -92,
+    "r2": -77,
+    "r3": -76,
+    "distance": 5,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T06:41:18.465Z"
+  },
+  {
+    "r1": -92,
+    "r2": -77,
+    "r3": -78,
+    "distance": 5,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T06:41:23.930Z"
+  },
+  {
+    "r1": -92,
+    "r2": -79,
+    "r3": -78,
+    "distance": 5,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T06:41:28.241Z"
+  },
+  {
+    "r1": -87,
+    "r2": -79,
+    "r3": -78,
+    "distance": 2,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T06:41:28.271Z"
+  },
+  {
+    "r1": -87,
+    "r2": -79,
+    "r3": -85,
+    "distance": 2,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T06:41:33.947Z"
+  },
+  {
+    "r1": -86,
+    "r2": -80,
+    "r3": -81,
+    "distance": 2,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T06:41:51.944Z"
+  },
+  {
+    "r1": -86,
+    "r2": -80,
+    "r3": -80,
+    "distance": 2,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T06:41:54.567Z"
+  },
+  {
+    "r1": -86,
+    "r2": -81,
+    "r3": -80,
+    "distance": 2,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T06:41:58.711Z"
+  },
+  {
+    "r1": -86,
+    "r2": -81,
+    "r3": -80,
+    "distance": 3,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T06:42:00.455Z"
+  },
+  {
+    "r1": -86,
+    "r2": -81,
+    "r3": -80,
+    "distance": 3,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T06:42:00.459Z"
+  },
+  {
+    "r1": -86,
+    "r2": -81,
+    "r3": -81,
+    "distance": 3,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T06:42:05.289Z"
+  },
+  {
+    "r1": -90,
+    "r2": -81,
+    "r3": -81,
+    "distance": 3,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T06:42:08.555Z"
+  },
+  {
+    "r1": -90,
+    "r2": -78,
+    "r3": -81,
+    "distance": 3,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T06:42:09.633Z"
+  },
+  {
+    "r1": -90,
+    "r2": -78,
+    "r3": -76,
+    "distance": 3,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T06:42:15.070Z"
+  },
+  {
+    "r1": -90,
+    "r2": -88,
+    "r3": -76,
+    "distance": 3,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T06:42:19.498Z"
+  },
+  {
+    "r1": -74,
+    "r2": -69,
+    "r3": -88,
+    "distance": 0,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T07:02:22.439Z"
+  },
+  {
+    "r1": -74,
+    "r2": -69,
+    "r3": -92,
+    "distance": 0,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T07:02:22.447Z"
+  },
+  {
+    "r1": -77,
+    "r2": -69,
+    "r3": -88,
+    "distance": 0,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T07:02:22.451Z"
+  },
+  {
+    "r1": -74,
+    "r2": -73,
+    "r3": -86,
+    "distance": 0,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T07:02:31.681Z"
+  },
+  {
+    "r1": -74,
+    "r2": -73,
+    "r3": -92,
+    "distance": 0,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T07:02:31.685Z"
+  },
+  {
+    "r1": -74,
+    "r2": -74,
+    "r3": -86,
+    "distance": 0,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T07:02:35.890Z"
+  },
+  {
+    "r1": -74,
+    "r2": -79,
+    "r3": -86,
+    "distance": 0,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T07:02:45.579Z"
+  },
+  {
+    "r1": -73,
+    "r2": -79,
+    "r3": -86,
+    "distance": 0,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T07:02:48.441Z"
+  },
+  {
+    "r1": -73,
+    "r2": -79,
+    "r3": -85,
+    "distance": 0,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T07:02:50.910Z"
+  },
+  {
+    "r1": -73,
+    "r2": -78,
+    "r3": -85,
+    "distance": 0,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T07:02:56.429Z"
+  },
+  {
+    "r1": -76,
+    "r2": -68,
+    "r3": -89,
+    "distance": 0,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T07:11:14.901Z"
+  },
+  {
+    "r1": -78,
+    "r2": -68,
+    "r3": -89,
+    "distance": 0,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T07:11:18.918Z"
+  },
+  {
+    "r1": -78,
+    "r2": -68,
+    "r3": -88,
+    "distance": 0,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T07:11:20.779Z"
+  },
+  {
+    "r1": -78,
+    "r2": -71,
+    "r3": -88,
+    "distance": 0,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T07:11:24.177Z"
+  },
+  {
+    "r1": -78,
+    "r2": -71,
+    "r3": -88,
+    "distance": 0,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T07:11:24.179Z"
+  },
+  {
+    "r1": -86,
+    "r2": -71,
+    "r3": -88,
+    "distance": 3,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T07:11:29.346Z"
+  },
+  {
+    "r1": -86,
+    "r2": -77,
+    "r3": -88,
+    "distance": 3,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T07:11:31.494Z"
+  },
+  {
+    "r1": -86,
+    "r2": -77,
+    "r3": -92,
+    "distance": 3,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T07:11:39.679Z"
+  },
+  {
+    "r1": -78,
+    "r2": -77,
+    "r3": -92,
+    "distance": 0,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T07:11:41.185Z"
+  },
+  {
+    "r1": -78,
+    "r2": -74,
+    "r3": -92,
+    "distance": 0,
+    "zoneId": 8,
+    "zoneName": "CVS FRONT 2",
+    "timestamp": "2026-05-13T07:11:43.151Z"
+  },
+  {
+    "r1": -79,
+    "r2": -73,
+    "r3": -93,
+    "distance": 0,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T07:12:21.701Z"
+  },
+  {
+    "r1": -79,
+    "r2": -71,
+    "r3": -93,
+    "distance": 0,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T07:12:27.379Z"
+  },
+  {
+    "r1": -79,
+    "r2": -71,
+    "r3": -89,
+    "distance": 0,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T07:12:29.510Z"
+  },
+  {
+    "r1": -76,
+    "r2": -71,
+    "r3": -89,
+    "distance": 1,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T07:12:29.532Z"
+  },
+  {
+    "r1": -76,
+    "r2": -72,
+    "r3": -89,
+    "distance": 1,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T07:12:38.193Z"
+  },
+  {
+    "r1": -71,
+    "r2": -72,
+    "r3": -89,
+    "distance": 0,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T07:12:39.993Z"
+  },
+  {
+    "r1": -71,
+    "r2": -69,
+    "r3": -89,
+    "distance": 0,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T07:12:52.147Z"
+  },
+  {
+    "r1": -78,
+    "r2": -69,
+    "r3": -89,
+    "distance": 0,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T07:12:53.472Z"
+  },
+  {
+    "r1": -78,
+    "r2": -69,
+    "r3": -91,
+    "distance": 0,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T07:12:55.650Z"
+  },
+  {
+    "r1": -78,
+    "r2": -75,
+    "r3": -91,
+    "distance": 0,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T07:13:02.543Z"
+  },
+  {
+    "r1": -69,
+    "r2": -75,
+    "r3": -94,
+    "distance": 0,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T07:13:12.241Z"
+  },
+  {
+    "r1": -69,
+    "r2": -73,
+    "r3": -94,
+    "distance": 0,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T07:13:13.814Z"
+  },
+  {
+    "r1": -69,
+    "r2": -73,
+    "r3": -93,
+    "distance": 0,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T07:13:15.987Z"
+  },
+  {
+    "r1": -67,
+    "r2": -73,
+    "r3": -93,
+    "distance": 0,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T07:13:18.727Z"
+  },
+  {
+    "r1": -67,
+    "r2": -73,
+    "r3": -96,
+    "distance": 0,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T07:13:26.173Z"
+  },
+  {
+    "r1": -69,
+    "r2": -73,
+    "r3": -96,
+    "distance": 0,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T07:13:28.766Z"
+  },
+  {
+    "r1": -69,
+    "r2": -72,
+    "r3": -96,
+    "distance": 0,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T07:13:33.574Z"
+  },
+  {
+    "r1": -77,
+    "r2": -72,
+    "r3": -96,
+    "distance": 0,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T07:13:40.075Z"
+  },
+  {
+    "r1": -77,
+    "r2": -73,
+    "r3": -96,
+    "distance": 0,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T07:13:43.834Z"
+  },
+  {
+    "r1": -77,
+    "r2": -73,
+    "r3": -93,
+    "distance": 0,
+    "zoneId": 7,
+    "zoneName": "CVS FRONT 1",
+    "timestamp": "2026-05-13T07:13:46.382Z"
+  },
+  {
+    "r1": -86,
+    "r2": -78,
+    "r3": -88,
+    "distance": 1,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T07:14:30.014Z"
+  },
+  {
+    "r1": -83,
+    "r2": -78,
+    "r3": -88,
+    "distance": 2,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T07:14:33.695Z"
+  },
+  {
+    "r1": -83,
+    "r2": -74,
+    "r3": -88,
+    "distance": 2,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T07:14:36.235Z"
+  },
+  {
+    "r1": -83,
+    "r2": -74,
+    "r3": -86,
+    "distance": 2,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T07:14:39.838Z"
+  },
+  {
+    "r1": -84,
+    "r2": -74,
+    "r3": -86,
+    "distance": 1,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T07:14:44.596Z"
+  },
+  {
+    "r1": -84,
+    "r2": -74,
+    "r3": -90,
+    "distance": 1,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T07:14:49.733Z"
+  },
+  {
+    "r1": -83,
+    "r2": -74,
+    "r3": -90,
+    "distance": 5,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T07:14:55.782Z"
+  },
+  {
+    "r1": -83,
+    "r2": -74,
+    "r3": -82,
+    "distance": 5,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T07:15:01.538Z"
+  },
+  {
+    "r1": -83,
+    "r2": -75,
+    "r3": -82,
+    "distance": 5,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T07:15:03.367Z"
+  },
+  {
+    "r1": -92,
+    "r2": -75,
+    "r3": -82,
+    "distance": 3,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T07:15:06.918Z"
+  },
+  {
+    "r1": -92,
+    "r2": -78,
+    "r3": -82,
+    "distance": 3,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T07:15:17.887Z"
+  },
+  {
+    "r1": -89,
+    "r2": -78,
+    "r3": -82,
+    "distance": 3,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T07:15:17.926Z"
+  },
+  {
+    "r1": -89,
+    "r2": -78,
+    "r3": -82,
+    "distance": 3,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T07:15:20.438Z"
+  },
+  {
+    "r1": -89,
+    "r2": -78,
+    "r3": -79,
+    "distance": 3,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T07:15:24.916Z"
+  },
+  {
+    "r1": -89,
+    "r2": -81,
+    "r3": -79,
+    "distance": 3,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T07:15:30.404Z"
+  },
+  {
+    "r1": -89,
+    "r2": -81,
+    "r3": -89,
+    "distance": 3,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T07:15:38.278Z"
+  },
+  {
+    "r1": -83,
+    "r2": -81,
+    "r3": -89,
+    "distance": 1,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T07:15:43.508Z"
+  },
+  {
+    "r1": -83,
+    "r2": -81,
+    "r3": -79,
+    "distance": 1,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T07:15:51.496Z"
+  },
+  {
+    "r1": -93,
+    "r2": -81,
+    "r3": -79,
+    "distance": 3,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T07:15:57.037Z"
+  },
+  {
+    "r1": -93,
+    "r2": -73,
+    "r3": -79,
+    "distance": 3,
+    "zoneId": 9,
+    "zoneName": "CVS FRONT 3",
+    "timestamp": "2026-05-13T07:15:58.174Z"
+  },
+  {
+    "r1": -82,
+    "r2": -75,
+    "r3": -83,
+    "distance": 1,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T07:18:22.489Z"
+  },
+  {
+    "r1": -82,
+    "r2": -70,
+    "r3": -83,
+    "distance": 1,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T07:18:24.872Z"
+  },
+  {
+    "r1": -88,
+    "r2": -70,
+    "r3": -83,
+    "distance": 2,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T07:18:26.880Z"
+  },
+  {
+    "r1": -88,
+    "r2": -69,
+    "r3": -83,
+    "distance": 2,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T07:18:35.000Z"
+  },
+  {
+    "r1": -88,
+    "r2": -69,
+    "r3": -80,
+    "distance": 2,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T07:18:37.429Z"
+  },
+  {
+    "r1": -84,
+    "r2": -69,
+    "r3": -80,
+    "distance": 1,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T07:18:37.459Z"
+  },
+  {
+    "r1": -84,
+    "r2": -69,
+    "r3": -84,
+    "distance": 1,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T07:18:45.556Z"
+  },
+  {
+    "r1": -84,
+    "r2": -67,
+    "r3": -84,
+    "distance": 1,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T07:18:47.896Z"
+  },
+  {
+    "r1": -84,
+    "r2": -67,
+    "r3": -84,
+    "distance": 1,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T07:18:50.234Z"
+  },
+  {
+    "r1": -84,
+    "r2": -67,
+    "r3": -77,
+    "distance": 1,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T07:18:55.986Z"
+  },
+  {
+    "r1": -84,
+    "r2": -66,
+    "r3": -77,
+    "distance": 1,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T07:18:56.007Z"
+  },
+  {
+    "r1": -81,
+    "r2": -67,
+    "r3": -84,
+    "distance": 1,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T07:19:20.454Z"
+  },
+  {
+    "r1": -82,
+    "r2": -67,
+    "r3": -84,
+    "distance": 1,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T07:19:22.481Z"
+  },
+  {
+    "r1": -82,
+    "r2": -67,
+    "r3": -87,
+    "distance": 1,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T07:19:28.824Z"
+  },
+  {
+    "r1": -82,
+    "r2": -72,
+    "r3": -87,
+    "distance": 1,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T07:19:31.382Z"
+  },
+  {
+    "r1": -82,
+    "r2": -72,
+    "r3": -87,
+    "distance": 1,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T07:19:31.385Z"
+  },
+  {
+    "r1": -83,
+    "r2": -72,
+    "r3": -87,
+    "distance": 1,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T07:19:34.606Z"
+  },
+  {
+    "r1": -83,
+    "r2": -68,
+    "r3": -87,
+    "distance": 1,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T07:19:40.900Z"
+  },
+  {
+    "r1": -83,
+    "r2": -68,
+    "r3": -84,
+    "distance": 1,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T07:19:43.558Z"
+  },
+  {
+    "r1": -84,
+    "r2": -68,
+    "r3": -84,
+    "distance": 1,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T07:19:43.562Z"
+  },
+  {
+    "r1": -83,
+    "r2": -68,
+    "r3": -84,
+    "distance": 1,
+    "zoneId": 10,
+    "zoneName": "CVS FRONT 4",
+    "timestamp": "2026-05-13T07:19:43.565Z"
+  }
+]

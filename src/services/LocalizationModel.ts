@@ -23,9 +23,9 @@ export const ZONES: Zone[] = [
   { id: 5, name: "PANTRY TABLE 2",  x: 67, y: 38 },
   { id: 6, name: "ENTRANCE DOOR",   x: 25, y: 63 },
   { id: 7, name: "CVS FRONT 1", x: 60, y: 50 },
-  { id: 8, name: "CVS FRONT 2", x: 60, y: 70 },
-  { id: 9, name: "CVS FRONT 3", x: 65, y: 70 },
-  { id: 10, name: "CVS FRONT 4", x: 72, y: 70 },
+  { id: 8, name: "CVS FRONT 2", x: 59, y: 70 },
+  { id: 9, name: "CVS FRONT 3", x: 68, y: 70 },
+  { id: 10, name: "CVS FRONT 4", x: 77, y: 70 },
 ];
 
 const rf = new RandomForestClassifier({ nEstimators: 100 });

@@ -1,7 +1,7 @@
 'use client'
 import { motion } from "motion/react"
 import React, { useState, useEffect } from 'react';
-import { collection, onSnapshot, query, orderBy, limit } from "firebase/firestore";
+import { collection, onSnapshot, query,serverTimestamp, orderBy, limit, addDoc } from "firebase/firestore";
 import { db } from "@src/lib/firebase"; 
 import { initAndTrainModel, predictCurrentZone, Zone } from "../src/services/LocalizationModel";
 
@@ -15,8 +15,8 @@ export default function Map({ isBiomed, setIsBiomed }: stateProps) {
     const [currentZone, setCurrentZone] = useState<Zone>({
         id: 999,
         name: "INITIALIZING...",
-        x: 72,  
-        y: 70
+        x: 59,  
+        y: 72
     });
 
     const [assetName,setAssetName] = useState<String>("Infusion Pump");
@@ -42,13 +42,13 @@ useEffect(() => {
     if (!snapshot.empty) {
       const docs = snapshot.docs.map(d => d.data());
       
-      // Find the LATEST reading 
+      // Find the LATEST readings 
       const latestR1 = docs.find(d => d.BioMedReaderId === 1);
       const latestR2 = docs.find(d => d.BioMedReaderId === 2);
       const latestR3 = docs.find(d => d.BioMedReaderId === 3);
 
       if (latestR1 && latestR2 && latestR3) {
-        // extract the RSSI and distance. Note: Reader 1 is 'rssi1', Reader 2 is 'rssi2', Reader 3 is 'rssi3'
+        // extract the RSSI and distance Reader 1 is 'rssi1', Reader 2 is 'rssi2', Reader 3 is 'rssi3'
         const r1 = Number(latestR1.rssi1);
         const r2 = Number(latestR2.rssi2);
         const r3 = Number(latestR3.rssi3);
@@ -60,9 +60,14 @@ useEffect(() => {
         const result = predictCurrentZone(r1, r2, r3, distance);
         
         // Only update position if confidence is above 90%
-        if (result && result.confidence > 90) {
-          console.log(` High confidence prediction (${result.confidence.toFixed(1)}%): Moving to ${result.zone.name}`);
-          setCurrentZone(result.zone);
+        if (result && result.confidence > 93) {
+
+            addDoc(collection(db,"history"),{
+            result:result.zone.name,
+            time: serverTimestamp(),
+        })
+            console.warn(` High confidence prediction (${result.confidence.toFixed(1)}%): Moving to ${result.zone.name}`);
+            setCurrentZone(result.zone);
         } else if (result) {
           console.warn(` Low confidence prediction (${result.confidence.toFixed(1)}%) - Position unchanged`);
         }   
