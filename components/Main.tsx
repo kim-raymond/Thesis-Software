@@ -63,7 +63,7 @@ export default function({logIn,setLogIn}:loginProps){
     }
 
     return(
-        <div className={`${logIn ? '':'hidden'} w-full h-auto bg-stone-50 text-[1rem] text-stone-800`}>
+        <div className={`${logIn ? '':'hidden'} w-full h-screen bg-stone-50 text-[1rem] text-stone-800 flex flex-col`}>
         {/* TOP SECTION OF MAIN */}
         <div className="flex justify-between py-4 relative px-6">
         <div className="flex gap-0 justify-center items-center">
@@ -79,7 +79,7 @@ export default function({logIn,setLogIn}:loginProps){
         </div>
 
         {/* MAIN WRAPPER */}
-        <div className="bg-stone-300 w-full h-140 relative flex flex-col items-center px-6">
+        <div className="bg-stone-300 w-full flex-1 relative flex flex-col items-center px-6">
 
         {/* Search Section */}
         <form className={`
@@ -98,28 +98,28 @@ export default function({logIn,setLogIn}:loginProps){
         </form>
 
         {/*SIDE BAR WRAPPER */}
-        <div className={`z-20 h-full bg-stone-100 absolute flex flex-col left-0 py-[1.125rem] px-[1.5rem] gap-8 transform transition-transform duration-300 ease-in-out ${showSidebar ? 'w-6rem' : 'w-[16.25rem]'}`}>
+        <div className={`z-20 h-full bg-stone-100 absolute flex flex-col left-0 py-[1.125rem] px-[1.5rem] gap-2 transform transition-all duration-300 ease-in-out ${showSidebar ? 'w-[16.25rem]' : 'w-20'}`}>
         
         <div className='w-full flex flex-col '>
             
         {/* header */}
         <div className='flex justify-between items-center'>
-        <h2 className={`font-semibold text-stone-700 ${showSidebar ? 'hidden' : ''} `}>Active Tags</h2>
+        <h2 className={`font-semibold text-[0.875rem] text-stone-700 ${showSidebar ? '' : 'hidden'} `}>Active Tags</h2>
 
         <button onClick={() => setShowSidebar(prev => !prev)} className="p-2 rounded-md hover:bg-stone-200 transition">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" className="w-5 h-5 text-stone-700">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" className="w-4 h-4 text-stone-700">
             <path fill="currentColor" d="M16 132h416c8.8 0 16-7.2 16-16V76c0-8.8-7.2-16-16-16H16C7.2 60 0 67.2 0 76v40c0 8.8 7.2 16 16 16zm416 104H16c-8.8 0-16 7.2-16 16v40c0 8.8 7.2 16 16 16h416c8.8 0 16-7.2 16-16v-40c0-8.8-7.2-16-16-16zm0 160H16c-8.8 0-16 7.2-16 16v40c0 8.8 7.2 16 16 16h416c8.8 0 16-7.2 16-16v-40c0-8.8-7.2-16-16-16z"/>
         </svg>
         </button>
         </div>
 
-        <div className={`w-full flex justify-between items-baseline text-[0.75rem] py-1.5 ${showSidebar ? 'hidden' : ''}`}>
+        <div className={`w-full flex justify-between items-baseline text-[0.75rem] py-1.5 ${showSidebar ? '' : 'hidden'}`}>
         <span className='font-semibold text-stone-700'>Device</span>
         <span className='text-[0.75rem]'>Serial No.</span>
         </div>
 
         {/* ACTIVE LIST CONTAINER */}
-        <div className={`w-full text-[0.875rem] flex flex-col gap-[0.25rem] py-2 ${showSidebar ? 'hidden' : ''}`}>
+        <div className={`w-full text-[0.875rem] flex flex-col gap-[0.25rem] py-2 ${showSidebar ? '' : 'hidden'}`}>
 
         <section className='w-full flex justify-between items-center'>
             <span className='text-green-500 py-[0.125rem] leading-[1]'>Infusion Pump</span>
@@ -157,9 +157,33 @@ export default function({logIn,setLogIn}:loginProps){
         </section>
         </div>
         </div>
+
+        {/* HISTORY SECTION */}
+        <div className={`flex items-center `} onClick={handleShowHistory}>
+        <button className="hover:bg-stone-200 p-2 transition rounded-md">
+        <svg 
+        xmlns="http://www.w3.org/2000/svg" 
+        width="18" 
+        height="18" 
+        viewBox="0 0 24 24" 
+        fill="none" 
+        stroke="currentColor" 
+        strokeWidth="2" 
+        strokeLinecap="round" 
+        strokeLinejoin="round" 
+        className="w-4 h-4 text-stone-800 "
+        >
+        <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" />
+        <path d="M3 3v5h5" />
+        <path d="M12 7v5l4 2" />
+        </svg>
+        </button>
+        <p className={`font-semibold text-[0.875rem] text-stone-800 ${showSidebar ? '' : 'hidden'}`} >History</p>
+        </div>
+
         
         {/* SETTINGS CONTAINER */}
-        <div className={`w-full flex flex-col justify-between py-2 border-t border-stone-400 ${showSidebar ? 'hidden' : ''}`}>
+        <div className={`w-full flex flex-col justify-between py-2 border-t border-stone-400 ${showSidebar ? '' : 'hidden'}`}>
         <span className='font-semibold text-stone-700'>Settings</span>
         {/* <span className='text-[0.875rem]'>Signal</span> */}
 
@@ -187,7 +211,6 @@ export default function({logIn,setLogIn}:loginProps){
         <section className={`text-[0.875rem] pl-4 w-auto ${SysSubSec? '':'hidden'} `}>
             <p onClick={handleShowCalibration}>Calibration</p>
             <p onClick={handleShowTest}>Testing</p>
-            <p onClick={handleShowHistory}>History</p>
         </section>
         </section>
         </div>
@@ -196,25 +219,32 @@ export default function({logIn,setLogIn}:loginProps){
         </div>
 
         {/*Map wrapper */}
-        <div className={`w-full ${ (showTest||showCalibration||showHistory) ? 'hidden':''} z-10`}>
-        <Map isBiomed={isBiomed} setIsBiomed={setIsBiomed}/>
-        </div>
-
+        {!(showTest || showCalibration || showHistory) && (
+          <div className="w-full z-10 flex-1 flex items-center justify-center">
+            <Map isBiomed={isBiomed} setIsBiomed={setIsBiomed}/>
+          </div>
+        )}
 
         {/* Test Wrapper */}
-        <div className={` h-full ${showTest? '':'hidden'}`}>
-        <Test/>
-        </div>
+        {showTest && (
+          <div className="h-full">
+            <Test />
+          </div>
+        )}
 
         {/* Calibration wrapper */}
-        <div className={`h-full w-[50rem] ${showCalibration? '':'hidden'}`}>
-        <Calibration/>
-        </div>
+        {showCalibration && (
+          <div className="h-full w-[50rem]">
+            <Calibration />
+          </div>
+        )}
 
         {/* History Wrapper */}
-        <div className={` h-full ${showHistory? '':'hidden'}`}>
-        <History/>
-        </div>
+        {showHistory && (
+          <div className="h-full">
+            <History />
+          </div>
+        )}
 
         {/* LOWER RIGHT BOTTON WRAPPER */}
         <div className={`z-20 right-0 bottom-0 px-4 py-6 flex flex-col absolute gap-2 ${showTest? 'hidden':''}`}>

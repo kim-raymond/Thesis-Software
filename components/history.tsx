@@ -32,16 +32,14 @@ export default function History() {
     },["history"]);
 
     return (
-        <div className='w-full h-full flex flex-col gap-[2rem] bg-white justify-center text-[1rem] px-[2rem] shadow-md rounded-lg'>
+        <div className='w-full h-full flex flex-col gap-[2rem] bg-white text-[1rem] px-[2rem] py-[1rem] shadow-md rounded-lg'>
 
-        <h2 className="font-bold text-center">History</h2>
+        <h2 className="font-bold text-center text-stone-600">History Log</h2>
 
-        <div className="flex flex-col gap-4 w-full">
+        <div className="flex flex-col gap-4 w-full overflow-y-scroll">
         {records.map(record => (
         <div key={record.id}>
-
-        <p>Record</p>
-
+        <p className="text-red-500">Record</p>
         {/* Details Containr */}
         <div className="flex flex-col gap-1">
         {Object.entries(record.data).map(([key, value]) => (

@@ -10,7 +10,7 @@ interface stateProps {
     setIsBiomed: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-export default function Map({ isBiomed, setIsBiomed }: stateProps) {
+function Map({ isBiomed, setIsBiomed }: stateProps) {
     // Initial State 
     const [currentZone, setCurrentZone] = useState<Zone>({
         id: 999,
@@ -21,6 +21,7 @@ export default function Map({ isBiomed, setIsBiomed }: stateProps) {
 
     const [assetName,setAssetName] = useState<String>("Infusion Pump");
     const [serialNumber,setSerialNumber] = useState<String>("M1220050188");
+    const lastZoneRef = React.useRef<number | null>(null);
 
 useEffect(() => {
   initAndTrainModel();
@@ -38,7 +39,7 @@ useEffect(() => {
     limit(10) 
   );
   
-  const unsubscribe = onSnapshot(q, (snapshot) => {
+  const unsubscribe = onSnapshot(q, async (snapshot) => {
     if (!snapshot.empty) {
       const docs = snapshot.docs.map(d => d.data());
       
@@ -58,17 +59,33 @@ useEffect(() => {
 
         // Run the ML model with THREE signals and distance
         const result = predictCurrentZone(r1, r2, r3, distance);
-        
-        // Only update position if confidence is above 90%
-        if (result && result.confidence > 93) {
 
-            addDoc(collection(db,"history"),{
-            result:result.zone.name,
-            time: serverTimestamp(),
-        })
+        //  Only update position if confidence is above 90%
+        
+        if (result && result.confidence > 93) {
+            try {
+                await addDoc(collection(db,"history"),{
+                Battery:20,
+                Location:result.zone.name,
+                time: serverTimestamp(),
+            });
+            lastZoneRef.current = result.zone.id;
+            } catch (error) {
+                console.error("Error writing to history:", error);
+            }
             console.warn(` High confidence prediction (${result.confidence.toFixed(1)}%): Moving to ${result.zone.name}`);
             setCurrentZone(result.zone);
-        } else if (result) {
+        } 
+        else if (result) {
+            try {
+                await addDoc(collection(db,"history"),{
+                Battery:20,
+                Location:result.zone.name,
+                time: serverTimestamp(),
+            });
+            } catch (error) {
+                console.error("Error writing to history:", error);
+            }
           console.warn(` Low confidence prediction (${result.confidence.toFixed(1)}%) - Position unchanged`);
         }   
       }
@@ -79,7 +96,7 @@ useEffect(() => {
 }, []);
 
     return (
-        <div className="h-[85vh] w-full flex flex-col items-center justify-center p-4">
+        <div className="h-full w-full flex flex-col items-center justify-center p-4">
             
             {/* <div className="mb-4 text-center">
                 <h1 className="text-2xl font-black text-gray-800 uppercase tracking-widest">
@@ -90,7 +107,7 @@ useEffect(() => {
                 </p>
             </div> */}
 
-            <div className={`relative ${isBiomed ? 'w-[52rem] h-[35rem]' : 'w-[65rem] h-[35rem]'} border border-white shadow-2xl rounded-sm overflow-hidden bg-slate-200`}>
+            <div className={`relative w-full h-full max-w-6xl shadow-2xl rounded-sm overflow-hidden bg-slate-200`}>
                 <div className={`${isBiomed ? 'bg-biomed' : 'bg-map1'} bg-center bg-cover absolute inset-0 transition-opacity duration-700`} />
                 
                 <motion.div
@@ -116,3 +133,5 @@ useEffect(() => {
         </div>
     );
 }
+
+export default React.memo(Map);
