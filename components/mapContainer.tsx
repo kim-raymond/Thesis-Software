@@ -1,137 +1,139 @@
 'use client'
 import { motion } from "motion/react"
 import React, { useState, useEffect } from 'react';
-import { collection, onSnapshot, query,serverTimestamp, orderBy, limit, addDoc } from "firebase/firestore";
-import { db } from "@src/lib/firebase"; 
+import { collection, onSnapshot, query, serverTimestamp, orderBy, limit, addDoc, where } from "firebase/firestore";
+import { db } from "@src/lib/firebase";
 import { initAndTrainModel, predictCurrentZone, Zone } from "../src/services/LocalizationModel";
 
+// Single source of truth — imported by main.tsx too
+export const TAGS = [
+  { id: "TAG01", device: "XIAO_BATT_TAG01", name: "Infusion Pump", serial: "M1220050188" },
+  { id: "TAG02", device: "XIAO_BATT_TAG02", name: "Nebulizer",     serial: "M1220050189" },
+];
+
 interface stateProps {
-    isBiomed: boolean;
-    setIsBiomed: React.Dispatch<React.SetStateAction<boolean>>;
+  isBiomed: boolean;
+  setIsBiomed: React.Dispatch<React.SetStateAction<boolean>>;
+  selectedTagId: string;
 }
 
-function Map({ isBiomed, setIsBiomed }: stateProps) {
-    // Initial State 
-    const [currentZone, setCurrentZone] = useState<Zone>({
-        id: 999,
-        name: "INITIALIZING...",
-        x: 59,  
-        y: 72
-    });
+function Map({ isBiomed, setIsBiomed, selectedTagId }: stateProps) {
 
-    const [assetName,setAssetName] = useState<String>("Infusion Pump");
-    const [serialNumber,setSerialNumber] = useState<String>("M1220050188");
-    const lastZoneRef = React.useRef<number | null>(null);
-
-useEffect(() => {
-  initAndTrainModel();
-
-  // initialize Firebase listeners if db is available
-  if (!db) {
-    console.warn("Firebase not available, skipping real-time data fetching");
-    return;
-  }
-
-  // fetch the last 10-20 readings to ensure have at least one from each ID
-  const q = query(
-    collection(db, "sensor_readings"), 
-    orderBy("createdAt", "desc"),
-    limit(10) 
-  );
-  
-  const unsubscribe = onSnapshot(q, async (snapshot) => {
-    if (!snapshot.empty) {
-      const docs = snapshot.docs.map(d => d.data());
-      
-      // Find the LATEST readings 
-      const latestR1 = docs.find(d => d.BioMedReaderId === 1);
-      const latestR2 = docs.find(d => d.BioMedReaderId === 2);
-      const latestR3 = docs.find(d => d.BioMedReaderId === 3);
-
-      if (latestR1 && latestR2 && latestR3) {
-        // extract the RSSI and distance Reader 1 is 'rssi1', Reader 2 is 'rssi2', Reader 3 is 'rssi3'
-        const r1 = Number(latestR1.rssi1);
-        const r2 = Number(latestR2.rssi2);
-        const r3 = Number(latestR3.rssi3);
-        const distance = Number(latestR1.distance || latestR2.distance || latestR3.distance || 0); // Use distance from any reader
-
-        console.log(` Multi-Reader Update: R1:${r1} | R2:${r2} | R3:${r3} | Distance:${distance}`);
-
-        // Run the ML model with THREE signals and distance
-        const result = predictCurrentZone(r1, r2, r3, distance);
-
-        //  Only update position if confidence is above 90%
-        
-        if (result && result.confidence > 93) {
-            try {
-                await addDoc(collection(db,"history"),{
-                Battery:20,
-                Location:result.zone.name,
-                time: serverTimestamp(),
-            });
-            lastZoneRef.current = result.zone.id;
-            } catch (error) {
-                console.error("Error writing to history:", error);
-            }
-            console.warn(` High confidence prediction (${result.confidence.toFixed(1)}%): Moving to ${result.zone.name}`);
-            setCurrentZone(result.zone);
-        } 
-        else if (result) {
-            try {
-                await addDoc(collection(db,"history"),{
-                Battery:20,
-                Location:result.zone.name,
-                time: serverTimestamp(),
-            });
-            } catch (error) {
-                console.error("Error writing to history:", error);
-            }
-          console.warn(` Low confidence prediction (${result.confidence.toFixed(1)}%) - Position unchanged`);
-        }   
-      }
-    }
+  const [currentZone, setCurrentZone] = useState<Zone>({
+    id: 999,
+    name: "INITIALIZING...",
+    x: 59,
+    y: 72
   });
 
-  return () => unsubscribe();
-}, []);
+  const [assetName, setAssetName]       = useState<string>(TAGS[0].name);
+  const [serialNumber, setSerialNumber] = useState<string>(TAGS[0].serial);
+  const lastZoneRef = React.useRef<number | null>(null);
 
-    return (
-        <div className="h-full w-full flex flex-col items-center justify-center p-4">
-            
-            {/* <div className="mb-4 text-center">
-                <h1 className="text-2xl font-black text-gray-800 uppercase tracking-widest">
-                    {currentZone.name}
-                </h1>
-                <p className="text-xs font-mono text-pink-500">
-                    {currentZone.x}% | {currentZone.y}%
-                </p>
-            </div> */}
+  useEffect(() => {
+    const tag = TAGS.find(t => t.id === selectedTagId) ?? TAGS[0];
 
-            <div className={`relative w-full h-full max-w-6xl shadow-2xl rounded-sm overflow-hidden bg-slate-200`}>
-                <div className={`${isBiomed ? 'bg-biomed' : 'bg-map1'} bg-center bg-cover absolute inset-0 transition-opacity duration-700`} />
-                
-                <motion.div
-                    initial={false}
-                    className="absolute flex flex-col items-center justify-center z-[100]" 
-                    animate={{ left: `${currentZone.x}%`, top: `${currentZone.y}%` }}
-                    transition={{ type: "spring", stiffness: 90, damping: 15 }}
-                    style={{ left: `${currentZone.x}%`, top: `${currentZone.y}%`, transform: 'translate(-50%, -50%)' }}
-                >            
-                <motion.div
-                        animate={{ scale: [1, 1.15, 1] }}
-                        transition={{ repeat: Infinity, duration: 1.5 }}               
-                        style={{ width: 28, height: 28, backgroundColor: "#ff0088", borderRadius: "50%", boxShadow: "0 0 20px #ff0088", border: "3px solid white" }}
-                    />
-                    <div className=" flex flex-col  items-center text-slate-800 mt-3 uppercase bg-white/95 backdrop-blur-sm px-5 py-1 rounded-full shadow-xl border border-pink-100">
-                        <span className="text-[10px] font-bold">{assetName}</span> 
-                        <span className="text-[10px] font-black tracking-tighter  text-pink-500">
-                            {serialNumber}
-                        </span>
-                    </div>
-                </motion.div>
-            </div>
-        </div>
+    // Update badge immediately on switch
+    setAssetName(tag.name);
+    setSerialNumber(tag.serial);
+    setCurrentZone({ id: 999, name: "INITIALIZING...", x: 59, y: 72 });
+    lastZoneRef.current = null;
+
+    initAndTrainModel();
+
+    if (!db) {
+      console.warn("Firebase not available, skipping real-time data fetching");
+      return;
+    }
+
+    const q = query(
+      collection(db, "sensor_readings"),
+      where("tagId", "==", selectedTagId),  // filter by selected tag
+      orderBy("createdAt", "desc"),
+      limit(10)
     );
+
+    const unsubscribe = onSnapshot(q, async (snapshot) => {
+      if (!snapshot.empty) {
+        const docs = snapshot.docs.map(d => d.data());
+
+        const latestR1 = docs.find(d => d.BioMedReaderId === 1);
+        const latestR2 = docs.find(d => d.BioMedReaderId === 2);
+        const latestR3 = docs.find(d => d.BioMedReaderId === 3);
+
+        if (latestR1 && latestR2 && latestR3) {
+          const r1 = Number(latestR1.rssi1);
+          const r2 = Number(latestR2.rssi2);
+          const r3 = Number(latestR3.rssi3);
+          const distance = Number(latestR1.distance || latestR2.distance || latestR3.distance || 0);
+
+          console.log(`[${selectedTagId}] R1:${r1} | R2:${r2} | R3:${r3} | Distance:${distance}`);
+
+          const result = predictCurrentZone(r1, r2, r3, distance);
+
+          if (result && result.confidence > 93) {
+            try {
+              await addDoc(collection(db, "history"), {
+                Battery: 20,
+                Location: result.zone.name,
+                tagId: selectedTagId,
+                assetName: tag.name,
+                time: serverTimestamp(),
+              });
+              lastZoneRef.current = result.zone.id;
+            } catch (error) {
+              console.error("Error writing to history:", error);
+            }
+            console.warn(`[${selectedTagId}] High confidence (${result.confidence.toFixed(1)}%): ${result.zone.name}`);
+            setCurrentZone(result.zone);
+          } else if (result) {
+            try {
+              await addDoc(collection(db, "history"), {
+                Battery: 20,
+                Location: result.zone.name,
+                tagId: selectedTagId,
+                assetName: tag.name,
+                time: serverTimestamp(),
+              });
+            } catch (error) {
+              console.error("Error writing to history:", error);
+            }
+            console.warn(`[${selectedTagId}] Low confidence (${result.confidence.toFixed(1)}%) - Position unchanged`);
+          }
+        }
+      }
+    });
+
+    return () => unsubscribe();
+  }, [selectedTagId]); // re-runs on every tag switch
+
+  return (
+    <div className="h-full w-full flex flex-col items-center justify-center p-4">
+      <div className={`relative w-full h-full max-w-6xl shadow-2xl rounded-sm overflow-hidden bg-slate-200`}>
+        <div className={`${isBiomed ? 'bg-biomed' : 'bg-map1'} bg-center bg-cover absolute inset-0 transition-opacity duration-700`} />
+
+        <motion.div
+          initial={false}
+          className="absolute flex flex-col items-center justify-center z-[100]"
+          animate={{ left: `${currentZone.x}%`, top: `${currentZone.y}%` }}
+          transition={{ type: "spring", stiffness: 90, damping: 15 }}
+          style={{ left: `${currentZone.x}%`, top: `${currentZone.y}%`, transform: 'translate(-50%, -50%)' }}
+        >
+          <motion.div
+            animate={{ scale: [1, 1.15, 1] }}
+            transition={{ repeat: Infinity, duration: 1.5 }}
+            style={{ width: 28, height: 28, backgroundColor: "#ff0088", borderRadius: "50%", boxShadow: "0 0 20px #ff0088", border: "3px solid white" }}
+          />
+          <div className="flex flex-col items-center text-slate-800 mt-3 uppercase bg-white/95 backdrop-blur-sm px-5 py-1 rounded-full shadow-xl border border-pink-100">
+            <span className="text-[10px] font-bold">{assetName}</span>
+            <span className="text-[10px] font-black tracking-tighter text-pink-500">
+              {serialNumber}
+            </span>
+          </div>
+        </motion.div>
+      </div>
+    </div>
+  );
 }
 
 export default React.memo(Map);
