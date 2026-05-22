@@ -47,6 +47,12 @@ export const ZONES: Zone[] = [
 
 const rf = new RandomForestClassifier({ nEstimators: 100 });
 
+const RSSI_1M = -68;
+const PATH_LOSS_N = 3.5;
+const computeDistanceFromRssi = (rssi: number) => {
+  if (isNaN(rssi) || rssi <= -99) return NaN;
+  return Math.pow(10, (RSSI_1M - rssi) / (10 * PATH_LOSS_N));
+};
 
 export const initAndTrainModel = (): void => {
   try {
@@ -85,7 +91,7 @@ export const initAndTrainModel = (): void => {
     console.log(" ML: Training Complete.");
 
     // SELF-TEST: Using 2D array syntax
-    const testResult = rf.predict([[-66, -83, -70, -66, -83, -70, 5.0, 5.0, 5.0, 13, -17, 4]]);
+    const testResult = rf.predict([[-98, -98, -93, -96, -98, -95, 7.2, 7.2, 5.18, 13, -17, 4]]);
     console.log(`ML Self-Test: Predicted Zone ID: ${testResult[0]}`);
 
   } catch (error) {
@@ -110,9 +116,9 @@ export const predictCurrentZone = (r1: any, r2: any, r3: any, d1: any, d2: any, 
     const rawVal1 = isNaN(Number(rawR1 ?? r1)) ? val1 : Number(rawR1 ?? r1);
     const rawVal2 = isNaN(Number(rawR2 ?? r2)) ? val2 : Number(rawR2 ?? r2);
     const rawVal3 = isNaN(Number(rawR3 ?? r3)) ? val3 : Number(rawR3 ?? r3);
-    const val4 = isNaN(Number(d1)) ? 0 : Number(d1);
-    const val5 = isNaN(Number(d2)) ? 0 : Number(d2);
-    const val6 = isNaN(Number(d3)) ? 0 : Number(d3);
+    const val4 = isNaN(Number(d1)) ? computeDistanceFromRssi(val1) : Number(d1);
+    const val5 = isNaN(Number(d2)) ? computeDistanceFromRssi(val2) : Number(d2);
+    const val6 = isNaN(Number(d3)) ? computeDistanceFromRssi(val3) : Number(d3);
 
     const diff_r3_r2 = val3 - val2;
     const diff_r2_r1 = val2 - val1;
@@ -122,17 +128,45 @@ export const predictCurrentZone = (r1: any, r2: any, r3: any, d1: any, d2: any, 
     // Lowered threshold from -58 to -62 because training data maxed at -60/-64.
     // If one reader is extremely strong, prioritize that zone.
     let heuristicZoneId = -1;
-    if (val1 > -62) heuristicZoneId = 7; // Reader 1 -> Zone 7
-    if (val2 > -62) heuristicZoneId = 8; // Reader 2 -> Zone 8
-    if (val3 > -62) heuristicZoneId = 9; // Reader 3 -> Zone 9
+    console.log(`🔍 HEURISTIC DEBUG: val1=${val1}, val2=${val2}, val3=${val3}`);
+    console.log(`  val1 type: ${typeof val1}, isNaN: ${isNaN(val1)}`);
+    console.log(`  val2 type: ${typeof val2}, isNaN: ${isNaN(val2)}`);
+    console.log(`  val3 type: ${typeof val3}, isNaN: ${isNaN(val3)}`);
+    
+    const check1 = val1 > -62;
+    const check2 = val2 > -62;
+    const check3 = val3 > -62;
+    
+    console.log(`  Check 1: ${val1} > -62? ${check1}`);
+    console.log(`  Check 2: ${val2} > -62? ${check2}`);
+    console.log(`  Check 3: ${val3} > -62? ${check3}`);
+    
+    if (check1) {
+      console.log(`    ✅ Check 1 PASSED - setting heuristicZoneId = 7`);
+      heuristicZoneId = 7;
+    }
+    if (check2) {
+      console.log(`    ✅ Check 2 PASSED - setting heuristicZoneId = 8`);
+      heuristicZoneId = 8;
+    }
+    if (check3) {
+      console.log(`    ✅ Check 3 PASSED - setting heuristicZoneId = 9`);
+      heuristicZoneId = 9;
+    }
+    
+    console.log(`  → FINAL heuristicZoneId: ${heuristicZoneId}`);
 
     // Predict using 12 features
     const prediction = rf.predict([[val1, val2, val3, rawVal1, rawVal2, rawVal3, val4, val5, val6, diff_r3_r2, diff_r2_r1, diff_r1_r3]]);
     let predictedId = Number(prediction[0]);
+    console.log(`  ML predicted zone: ${predictedId}, heuristic zone: ${heuristicZoneId}`);
 
     // Overwrite with heuristic if very close to a known reader
     if (heuristicZoneId !== -1) {
+        console.log(`  ✅ APPLYING HEURISTIC: Overwriting prediction ${predictedId} → ${heuristicZoneId}`);
         predictedId = heuristicZoneId;
+    } else {
+        console.log(`  ⚠️ Heuristic NOT triggered (value = -1)`);
     }
 
     // Calculate confidence based on proximity to training data IN THE PREDICTED ZONE
@@ -168,13 +202,56 @@ export const predictCurrentZone = (r1: any, r2: any, r3: any, d1: any, d2: any, 
     // If heuristic triggered, boost confidence significantly
     if (heuristicZoneId !== -1) {
         confidence = Math.max(confidence, 98);
+        console.log(`  ✅ Heuristic confidence BOOSTED to ${confidence}`);
     }
 
     // If predicted zone has NO data for the reader that is strongest, penalize confidence
     // (e.g. if we predict Zone 7 but Reader 2 is strongest)
-    if (val1 < val2 && predictedId === 7) confidence *= 0.8;
-    if (val2 < val1 && predictedId === 8) confidence *= 0.8;
-    if (val3 < val1 && predictedId === 9) confidence *= 0.8;
+    // NOTE: Skip penalties if heuristic is active (heuristic gets priority!)
+    if (heuristicZoneId === -1) {
+      if (val1 < val2 && predictedId === 7) {
+        console.log(`  ⚠️ Penalty: Reader 1 weaker than Reader 2, but predicting Zone 7`);
+        confidence *= 0.8;
+      }
+      if (val2 < val1 && predictedId === 8) {
+        console.log(`  ⚠️ Penalty: Reader 2 weaker than Reader 1, but predicting Zone 8`);
+        confidence *= 0.8;
+      }
+      if (val3 < val1 && predictedId === 9) {
+        console.log(`  ⚠️ Penalty: Reader 3 weaker than Reader 1, but predicting Zone 9`);
+        confidence *= 0.8;
+      }
+    }
+
+    // Fallback to the closest training sample when the live RSSI is an exact or near-exact match.
+    // Only use nearest sample fallback if HEURISTIC did NOT trigger
+    // (Heuristic has priority when signal is very strong)
+    if (heuristicZoneId === -1) {
+      let nearestZoneId = predictedId;
+      let nearestSampleDistance = Infinity;
+      for (const sample of trainingRecords) {
+        const sr1 = Number(sample.r1);
+        const sr2 = Number(sample.r2);
+        const sr3 = Number(sample.r3);
+        const sampleDistance = Math.sqrt(
+          Math.pow(val1 - sr1, 2) +
+          Math.pow(val2 - sr2, 2) +
+          Math.pow(val3 - sr3, 2)
+        );
+        if (sampleDistance < nearestSampleDistance) {
+          nearestSampleDistance = sampleDistance;
+          nearestZoneId = Number(sample.zoneId);
+        }
+      }
+
+      if (nearestZoneId !== predictedId && nearestSampleDistance <= 2.5) {
+        console.log(`  📍 Fallback to nearest training sample: ${predictedId} → ${nearestZoneId} (distance: ${nearestSampleDistance.toFixed(2)})`);
+        predictedId = nearestZoneId;
+        confidence = Math.max(confidence, 92);
+      }
+    } else {
+      console.log(`  🎯 Heuristic active - skipping nearest sample override`);
+    }
 
     const match = ZONES.find(zone => zone.id === predictedId);
     
@@ -182,6 +259,8 @@ export const predictCurrentZone = (r1: any, r2: any, r3: any, d1: any, d2: any, 
         console.warn(`ML predicted ID ${predictedId}, but it doesn't exist in ZONES array.`);
         return undefined;
     }
+
+    console.log(`✨ FINAL RESULT: Zone ${predictedId} (${match.name}) - Confidence: ${confidence.toFixed(1)}%\n`);
 
     return {
       zone: match,

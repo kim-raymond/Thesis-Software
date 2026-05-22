@@ -12,7 +12,7 @@ export default function ({logIn, setLogIn}:LogInProps){
     function changeLoginStat(){
         // e.preventDefault();
         if(userId && password!==''){
-            if(password=='thesisdefended'&& userId=='admin'){
+            if(password=='ThesisDemo2026'&& userId=='panel'){
              setLogIn(true);
             }
         }

@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback, useMemo } from "react";
 import { db } from "@src/lib/firebase"; 
 import { collection, addDoc, onSnapshot, query, orderBy, serverTimestamp, deleteDoc, doc } from "firebase/firestore";
 
@@ -8,18 +8,8 @@ interface SignalReading {
   data: Record<string, any>;
 }
 
-export default function Login() {
-  const [rssi1Input, setRssi1Input] = useState("-70");
-  const [rssi2Input, setRssi2Input] = useState("-80");
-  const [rssi3Input, setRssi3Input] = useState("-75");
-  const [rawRssi1Input, setRawRssi1Input] = useState("-72");
-  const [rawRssi2Input, setRawRssi2Input] = useState("-82");
-  const [rawRssi3Input, setRawRssi3Input] = useState("-77");
-  const [distanceInput, setDistanceInput] = useState("5.0");
-  const [collectionName, setCollectionName] = useState("sensor_readings");
-  const [readings, setReadings] = useState<SignalReading[]>([]);
-  const [buzzer, setBuzzer] = useState(false);
-
+// Memoized document display component
+const DocumentItem = ({ reading, onDelete }: { reading: SignalReading, onDelete: (id: string) => void }) => {
   const formatFieldValue = (value: any) => {
     if (value instanceof Date) return value.toLocaleString();
     if (value && typeof value.toDate === "function") return value.toDate().toLocaleString();
@@ -27,21 +17,62 @@ export default function Login() {
     return String(value);
   };
 
-  const handleSetBuzzer = async () =>{
+  return (
+    <li className="bg-white p-4 border rounded-xl shadow-sm">
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+        <div>
+          <p className="text-xs text-slate-500 uppercase tracking-[0.2em]">Document ID</p>
+          <p className="font-mono text-sm break-all">{reading.id}</p>
+        </div>
+        <button 
+          className="px-3 py-1 bg-red-50 text-red-500 rounded-md hover:bg-red-100 text-xs font-bold transition"
+          onClick={() => onDelete(reading.id)}
+        >
+          DELETE
+        </button>
+      </div>
+      <div className="mt-3 grid gap-2 sm:grid-cols-2">
+        {Object.entries(reading.data).map(([key, value]) => (
+          <div key={key} className="rounded-lg bg-slate-50 p-3 border border-slate-200">
+            <p className="text-[0.65rem] uppercase tracking-[0.2em] text-slate-500">{key}</p>
+            <pre className="text-sm font-mono whitespace-pre-wrap break-words">{formatFieldValue(value)}</pre>
+          </div>
+        ))}
+      </div>
+    </li>
+  );
+};
+
+const DocumentItemMemo = React.memo(DocumentItem);
+
+export default function Login() {
+  const [rssi1Input, setRssi1Input] = useState("-91");
+  const [rssi2Input, setRssi2Input] = useState("-82");
+  const [rssi3Input, setRssi3Input] = useState("-60");
+  const [rawRssi1Input, setRawRssi1Input] = useState("-91");
+  const [rawRssi2Input, setRawRssi2Input] = useState("-82");
+  const [rawRssi3Input, setRawRssi3Input] = useState("-60");
+  const [distanceInput, setDistanceInput] = useState("5.0");
+  const [collectionName, setCollectionName] = useState("sensor_readings");
+  const [tagId, setTagId] = useState("TAG01");
+  const [readings, setReadings] = useState<SignalReading[]>([]);
+  const [buzzer, setBuzzer] = useState(false);
+  const [unsubscribeRef, setUnsubscribeRef] = useState<(() => void) | null>(null);
+
+  const handleSetBuzzer = useCallback(async () => {
     try{
       const newBuzzerState = !buzzer;
       setBuzzer(newBuzzerState);
-    addDoc(collection(db, collectionName), {
-    // BioMedReaderId: 1,
-    createdAt: serverTimestamp(),
-    buzzerState: !buzzer,
-    });
+      addDoc(collection(db, collectionName), {
+        createdAt: serverTimestamp(),
+        buzzerState: !buzzer,
+      });
     }catch(err){
       console.error("Error setting buzzer state: ", err);
     }
-  }
+  }, [buzzer, collectionName]);
 
-  const sendTestData = async (e: React.FormEvent) => {
+  const sendTestData = useCallback(async (e: React.FormEvent) => {
     e.preventDefault();
     try {
       const rssi1 = Number(rssi1Input);
@@ -55,7 +86,8 @@ export default function Login() {
       const distance2 = distance;
       const distance3 = distance;
 
-      await addDoc(collection(db, collectionName), {
+      const ref1 = await addDoc(collection(db, collectionName), {
+        tagId,
         BioMedReaderId: 1,
         rssi1,
         rawRssi1,
@@ -65,8 +97,10 @@ export default function Login() {
         createdAt: serverTimestamp(),
         buzzerState: buzzer,
       });
+      console.log(`WROTE doc1 id=${ref1.id}`);
 
-      await addDoc(collection(db, collectionName), {
+      const ref2 = await addDoc(collection(db, collectionName), {
+        tagId,
         BioMedReaderId: 2,
         rssi2,
         rawRssi2,
@@ -76,8 +110,10 @@ export default function Login() {
         createdAt: serverTimestamp(),
         buzzerState: buzzer,
       });
+      console.log(`WROTE doc2 id=${ref2.id}`);
 
-      await addDoc(collection(db, collectionName), {
+      const ref3 = await addDoc(collection(db, collectionName), {
+        tagId,
         BioMedReaderId: 3,
         rssi3,
         rawRssi3,
@@ -87,22 +123,28 @@ export default function Login() {
         createdAt: serverTimestamp(),
         buzzerState: buzzer,
       });
+      console.log(`WROTE doc3 id=${ref3.id}`);
 
       console.log(`✅ Injected Reader 1: ${rssi1}(${rawRssi1}), Reader 2: ${rssi2}(${rawRssi2}), Reader 3: ${rssi3}(${rawRssi3}), D1:${distance1},D2:${distance2},D3:${distance3}, buzzer: ${buzzer} into collection`);
     } catch (err) {
       console.error("Error adding document: ", err);
     }
-  };
+  }, [rssi1Input, rssi2Input, rssi3Input, rawRssi1Input, rawRssi2Input, rawRssi3Input, distanceInput, collectionName, tagId, buzzer]);
 
-  const deleteReading = async (id: string) => {
+  const deleteReading = useCallback(async (id: string) => {
     try {
       await deleteDoc(doc(db, collectionName, id));
     } catch (err) {
       console.error("Error deleting document: ", err);
     }
-  };
+  }, [collectionName]);
 
   useEffect(() => {
+    // Unsubscribe from previous listener if it exists
+    if (unsubscribeRef) {
+      unsubscribeRef();
+    }
+
     const q = query(collection(db, collectionName), orderBy("createdAt", "desc"));
     const unsubscribe = onSnapshot(q, (snapshot) => {
       setReadings(snapshot.docs.map(doc => ({
@@ -110,6 +152,9 @@ export default function Login() {
         data: doc.data(),
       })));
     });
+    
+    setUnsubscribeRef(() => unsubscribe);
+    
     return () => unsubscribe();
   }, [collectionName]);
 
@@ -134,6 +179,18 @@ export default function Login() {
           className="w-full p-2 border border-slate-300 rounded text-black bg-white focus:ring-2 focus:ring-blue-500 outline-none"
           placeholder="sensor_readings"
         />
+      </div>
+
+      <div className="mb-6">
+        <label className="block text-xs font-bold text-slate-500 uppercase mb-1">Tag ID</label>
+        <select 
+          value={tagId} 
+          onChange={(e) => setTagId(e.target.value)}
+          className="w-full p-2 border border-slate-300 rounded text-black bg-white focus:ring-2 focus:ring-blue-500 outline-none"
+        >
+          <option value="TAG01">TAG01 (Infusion Pump)</option>
+          <option value="TAG02">TAG02 (Nebulizer)</option>
+        </select>
       </div>
 
       <form onSubmit={sendTestData} className="bg-slate-50 p-6 rounded-xl border border-slate-200 shadow-sm flex flex-col gap-4">
@@ -212,28 +269,7 @@ export default function Login() {
         <h3 className="text-lg font-semibold border-b pb-2 text-slate-700">Database Documents</h3>
         <ul className="mt-4 flex flex-col gap-4">
           {readings.map((reading) => (
-            <li key={reading.id} className="bg-white p-4 border rounded-xl shadow-sm">
-              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
-                <div>
-                  <p className="text-xs text-slate-500 uppercase tracking-[0.2em]">Document ID</p>
-                  <p className="font-mono text-sm break-all">{reading.id}</p>
-                </div>
-                <button 
-                  className="px-3 py-1 bg-red-50 text-red-500 rounded-md hover:bg-red-100 text-xs font-bold transition"
-                  onClick={() => deleteReading(reading.id)}
-                >
-                  DELETE
-                </button>
-              </div>
-              <div className="mt-3 grid gap-2 sm:grid-cols-2">
-                {Object.entries(reading.data).map(([key, value]) => (
-                  <div key={key} className="rounded-lg bg-slate-50 p-3 border border-slate-200">
-                    <p className="text-[0.65rem] uppercase tracking-[0.2em] text-slate-500">{key}</p>
-                    <pre className="text-sm font-mono whitespace-pre-wrap break-words">{formatFieldValue(value)}</pre>
-                  </div>
-                ))}
-              </div>
-            </li>
+            <DocumentItemMemo key={reading.id} reading={reading} onDelete={deleteReading} />
           ))}
         </ul>
       </div>
