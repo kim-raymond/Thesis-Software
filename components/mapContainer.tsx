@@ -22,8 +22,8 @@ function Map({ isBiomed, setIsBiomed, selectedTagId }: stateProps) {
   const [currentZone, setCurrentZone] = useState<Zone>({
     id: 999,
     name: "INITIALIZING...",
-    x: 59,
-    y: 72
+    x: 79,
+    y: 30
   });
 
   const [assetName, setAssetName]       = useState<string>(TAGS[0].name);
@@ -36,7 +36,7 @@ function Map({ isBiomed, setIsBiomed, selectedTagId }: stateProps) {
     // Update badge immediately on switch
     setAssetName(tag.name);
     setSerialNumber(tag.serial);
-    setCurrentZone({ id: 999, name: "INITIALIZING...", x: 59, y: 72 });
+    setCurrentZone({ id: 999, name: "INITIALIZING...", x: 65, y: 72 });
     lastZoneRef.current = null;
 
     initAndTrainModel();
@@ -57,21 +57,32 @@ function Map({ isBiomed, setIsBiomed, selectedTagId }: stateProps) {
       if (!snapshot.empty) {
         const docs = snapshot.docs.map(d => d.data());
 
+        // Allow prediction even if some readers are missing by providing defaults
         const latestR1 = docs.find(d => d.BioMedReaderId === 1);
         const latestR2 = docs.find(d => d.BioMedReaderId === 2);
         const latestR3 = docs.find(d => d.BioMedReaderId === 3);
 
-        if (latestR1 && latestR2 && latestR3) {
-          const r1 = Number(latestR1.rssi1);
-          const r2 = Number(latestR2.rssi2);
-          const r3 = Number(latestR3.rssi3);
-          const distance = Number(latestR1.distance || latestR2.distance || latestR3.distance || 0);
+        // We only need AT LEAST ONE reader to attempt a prediction, 
+        // though 3 is ideal for ML accuracy.
+        if (latestR1 || latestR2 || latestR3) {
+          const r1 = latestR1 ? Number(latestR1.rssi1 || latestR1.rssi) : -100;
+          const r2 = latestR2 ? Number(latestR2.rssi2 || latestR2.rssi) : -100;
+          const r3 = latestR3 ? Number(latestR3.rssi3 || latestR3.rssi) : -100;
 
-          console.log(`[${selectedTagId}] R1:${r1} | R2:${r2} | R3:${r3} | Distance:${distance}`);
+          const rawR1 = latestR1 ? Number(latestR1.rawRssi1 ?? latestR1.rssi1 ?? latestR1.rssi) : r1;
+          const rawR2 = latestR2 ? Number(latestR2.rawRssi2 ?? latestR2.rssi2 ?? latestR2.rssi) : r2;
+          const rawR3 = latestR3 ? Number(latestR3.rawRssi3 ?? latestR3.rssi3 ?? latestR3.rssi) : r3;
 
-          const result = predictCurrentZone(r1, r2, r3, distance);
+          // Read per-reader distance fields (distance1, distance2, distance3) if available
+          const d1 = latestR1 ? Number(latestR1.distance1 ?? latestR1.distance ?? NaN) : NaN;
+          const d2 = latestR2 ? Number(latestR2.distance2 ?? latestR2.distance ?? NaN) : NaN;
+          const d3 = latestR3 ? Number(latestR3.distance3 ?? latestR3.distance ?? NaN) : NaN;
 
-          if (result && result.confidence > 93) {
+          console.log(`[${selectedTagId}] R1:${r1} | R2:${r2} | R3:${r3} | D1:${isNaN(d1) ? 'NA' : d1.toFixed(2)} | D2:${isNaN(d2) ? 'NA' : d2.toFixed(2)} | D3:${isNaN(d3) ? 'NA' : d3.toFixed(2)}`);
+
+          const result = predictCurrentZone(r1, r2, r3, d1, d2, d3, rawR1, rawR2, rawR3);
+
+          if (result && result.confidence > 80) {
             try {
               await addDoc(collection(db, "history"), {
                 Battery: 20,
@@ -109,7 +120,7 @@ function Map({ isBiomed, setIsBiomed, selectedTagId }: stateProps) {
 
   return (
     <div className="h-full w-full flex flex-col items-center justify-center p-4">
-      <div className={`relative w-full h-full max-w-6xl shadow-2xl rounded-sm overflow-hidden bg-slate-200`}>
+      <div className={`relative ${isBiomed ? 'w-[45em]' : 'w-full'} h-full max-w-6xl shadow-2xl rounded-sm overflow-hidden bg-slate-200`}>
         <div className={`${isBiomed ? 'bg-biomed' : 'bg-map1'} bg-center bg-cover absolute inset-0 transition-opacity duration-700`} />
 
         <motion.div

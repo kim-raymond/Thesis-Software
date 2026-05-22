@@ -12,6 +12,9 @@ export default function Login() {
   const [rssi1Input, setRssi1Input] = useState("-70");
   const [rssi2Input, setRssi2Input] = useState("-80");
   const [rssi3Input, setRssi3Input] = useState("-75");
+  const [rawRssi1Input, setRawRssi1Input] = useState("-72");
+  const [rawRssi2Input, setRawRssi2Input] = useState("-82");
+  const [rawRssi3Input, setRawRssi3Input] = useState("-77");
   const [distanceInput, setDistanceInput] = useState("5.0");
   const [collectionName, setCollectionName] = useState("sensor_readings");
   const [readings, setReadings] = useState<SignalReading[]>([]);
@@ -44,36 +47,48 @@ export default function Login() {
       const rssi1 = Number(rssi1Input);
       const rssi2 = Number(rssi2Input);
       const rssi3 = Number(rssi3Input);
+      const rawRssi1 = Number(rawRssi1Input);
+      const rawRssi2 = Number(rawRssi2Input);
+      const rawRssi3 = Number(rawRssi3Input);
       const distance = Number(distanceInput);
+      const distance1 = distance;
+      const distance2 = distance;
+      const distance3 = distance;
 
       await addDoc(collection(db, collectionName), {
         BioMedReaderId: 1,
         rssi1,
-        distance,
+        rawRssi1,
+        distance1,
+        distance2,
+        distance3,
         createdAt: serverTimestamp(),
         buzzerState: buzzer,
-        // unixTime: Date.now(),
       });
 
       await addDoc(collection(db, collectionName), {
         BioMedReaderId: 2,
         rssi2,
-        distance,
+        rawRssi2,
+        distance1,
+        distance2,
+        distance3,
         createdAt: serverTimestamp(),
         buzzerState: buzzer,
-        // unixTime: Date.now(),
       });
 
       await addDoc(collection(db, collectionName), {
         BioMedReaderId: 3,
         rssi3,
-        distance,
+        rawRssi3,
+        distance1,
+        distance2,
+        distance3,
         createdAt: serverTimestamp(),
         buzzerState: buzzer,
-        // unixTime: Date.now(),
       });
 
-      console.log(`✅ Injected Reader 1: ${rssi1}, Reader 2: ${rssi2}, Reader 3: ${rssi3}, Distance: ${distance}, buzzer: ${buzzer} into collection`);
+      console.log(`✅ Injected Reader 1: ${rssi1}(${rawRssi1}), Reader 2: ${rssi2}(${rawRssi2}), Reader 3: ${rssi3}(${rawRssi3}), D1:${distance1},D2:${distance2},D3:${distance3}, buzzer: ${buzzer} into collection`);
     } catch (err) {
       console.error("Error adding document: ", err);
     }
@@ -122,9 +137,9 @@ export default function Login() {
       </div>
 
       <form onSubmit={sendTestData} className="bg-slate-50 p-6 rounded-xl border border-slate-200 shadow-sm flex flex-col gap-4">
-        <div className="flex gap-4">
-          <div className="flex-1">
-            <label className="block text-xs font-bold text-slate-500 uppercase mb-1">BioMedReaderId 1 - RSSI (dBm)</label>
+        <div className="grid grid-cols-2 gap-4">
+          <div>
+            <label className="block text-xs font-bold text-slate-500 uppercase mb-1">R1 - RSSI</label>
             <input 
               type="number"
               value={rssi1Input} 
@@ -132,8 +147,17 @@ export default function Login() {
               className="w-full p-2 border border-slate-300 rounded text-black bg-white focus:ring-2 focus:ring-blue-500 outline-none"
             />
           </div>
-          <div className="flex-1">
-            <label className="block text-xs font-bold text-slate-500 uppercase mb-1">BioMedReaderId 2 - RSSI (dBm)</label>
+          <div>
+            <label className="block text-xs font-bold text-slate-500 uppercase mb-1">R1 - RAW RSSI</label>
+            <input 
+              type="number"
+              value={rawRssi1Input} 
+              onChange={(e) => setRawRssi1Input(e.target.value)}
+              className="w-full p-2 border border-slate-300 rounded text-black bg-white focus:ring-2 focus:ring-blue-500 outline-none"
+            />
+          </div>
+          <div>
+            <label className="block text-xs font-bold text-slate-500 uppercase mb-1">R2 - RSSI</label>
             <input 
               type="number"
               value={rssi2Input} 
@@ -141,8 +165,17 @@ export default function Login() {
               className="w-full p-2 border border-slate-300 rounded text-black bg-white focus:ring-2 focus:ring-blue-500 outline-none"
             />
           </div>
-          <div className="flex-1">
-            <label className="block text-xs font-bold text-slate-500 uppercase mb-1">BioMedReaderId 3 - RSSI (dBm)</label>
+          <div>
+            <label className="block text-xs font-bold text-slate-500 uppercase mb-1">R2 - RAW RSSI</label>
+            <input 
+              type="number"
+              value={rawRssi2Input} 
+              onChange={(e) => setRawRssi2Input(e.target.value)}
+              className="w-full p-2 border border-slate-300 rounded text-black bg-white focus:ring-2 focus:ring-blue-500 outline-none"
+            />
+          </div>
+          <div>
+            <label className="block text-xs font-bold text-slate-500 uppercase mb-1">R3 - RSSI</label>
             <input 
               type="number"
               value={rssi3Input} 
@@ -150,7 +183,16 @@ export default function Login() {
               className="w-full p-2 border border-slate-300 rounded text-black bg-white focus:ring-2 focus:ring-blue-500 outline-none"
             />
           </div>
-          <div className="flex-1 flex flex-col justify-between">
+          <div>
+            <label className="block text-xs font-bold text-slate-500 uppercase mb-1">R3 - RAW RSSI</label>
+            <input 
+              type="number"
+              value={rawRssi3Input} 
+              onChange={(e) => setRawRssi3Input(e.target.value)}
+              className="w-full p-2 border border-slate-300 rounded text-black bg-white focus:ring-2 focus:ring-blue-500 outline-none"
+            />
+          </div>
+          <div className="col-span-2">
             <label className="block text-xs font-bold text-slate-500 uppercase mb-1">Distance (m)</label>
             <input 
               type="number"

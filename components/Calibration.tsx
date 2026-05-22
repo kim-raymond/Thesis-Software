@@ -5,10 +5,15 @@ import { db } from '@src/lib/firebase';
 import { collection, onSnapshot, query, orderBy, limit } from 'firebase/firestore';
 
 interface SignalData {
-  r1: number | null;
-  r2: number | null;
-  r3: number | null;
-  distance: number | null;
+    r1: number | null;
+    r2: number | null;
+    r3: number | null;
+    rawR1?: number | null;
+    rawR2?: number | null;
+    rawR3?: number | null;
+    d1?: number | null;
+    d2?: number | null;
+    d3?: number | null;
 }
 
 export default function Calibration() {
@@ -16,9 +21,9 @@ export default function Calibration() {
     const [zoneId, setZoneId] = useState('');
     const [isRecording, setIsRecording] = useState(false);
     const [recordedCount, setRecordedCount] = useState(0);
-    const [liveSignals, setLiveSignals] = useState<SignalData>({ r1: null, r2: null, r3: null, distance: null });
-    const [lastRecordedSignals, setLastRecordedSignals] = useState<SignalData>({ r1: null, r2: null, r3: null, distance: null });
-    const dataSetLn = 45;
+    const [liveSignals, setLiveSignals] = useState<SignalData>({ r1: null, r2: null, r3: null, rawR1: null, rawR2: null, rawR3: null, d1: null, d2: null, d3: null });
+    const [lastRecordedSignals, setLastRecordedSignals] = useState<SignalData>({ r1: null, r2: null, r3: null, rawR1: null, rawR2: null, rawR3: null, d1: null, d2: null, d3: null });
+    const dataSetLn = 5;
 
     const recordSample = async (signal: SignalData) => {
         const zoneIdNumber = Number(zoneId);
@@ -33,13 +38,19 @@ export default function Calibration() {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({
-                zoneName: zoneName.trim(),
-                zoneId: zoneIdNumber,
-                r1: signal.r1,
-                r2: signal.r2,
-                r3: signal.r3,
-                distance: signal.distance
-            }),
+                    zoneName: zoneName.trim(),
+                    zoneId: zoneIdNumber,
+                    r1: signal.r1,
+                    r2: signal.r2,
+                    r3: signal.r3,
+                    rawR1: signal.rawR1 ?? null,
+                    rawR2: signal.rawR2 ?? null,
+                    rawR3: signal.rawR3 ?? null,
+                    // include per-reader distances when available (no averaged distance)
+                    distance1: signal.d1 ?? null,
+                    distance2: signal.d2 ?? null,
+                    distance3: signal.d3 ?? null,
+                }),
         });
 
         if (!response.ok) {
@@ -60,11 +71,26 @@ export default function Calibration() {
             const latestR2 = docs.find(d => d.BioMedReaderId === 2);
             const latestR3 = docs.find(d => d.BioMedReaderId === 3);
 
+            // Extract RSSI per reader and read per-reader distances (distance1/2/3) when available
+            const parseDistance = (value: any) => {
+                const parsed = Number(value);
+                return Number.isNaN(parsed) ? null : parsed;
+            };
+
+            const d1 = latestR1 ? parseDistance(latestR1.distance1 ?? latestR1.distance) : null;
+            const d2 = latestR2 ? parseDistance(latestR2.distance2 ?? latestR2.distance) : null;
+            const d3 = latestR3 ? parseDistance(latestR3.distance3 ?? latestR3.distance) : null;
+
             const newSignals = {
                 r1: latestR1 ? latestR1.rssi1 || latestR1.rssi : null,
                 r2: latestR2 ? latestR2.rssi2 || latestR2.rssi : null,
                 r3: latestR3 ? latestR3.rssi3 || latestR3.rssi : null,
-                distance: latestR1 ? latestR1.distance : latestR2 ? latestR2.distance : latestR3 ? latestR3.distance : null,
+                rawR1: latestR1 ? latestR1.rawRssi1 : null,
+                rawR2: latestR2 ? latestR2.rawRssi2 : null,
+                rawR3: latestR3 ? latestR3.rawRssi3 : null,
+                d1,
+                d2,
+                d3,
             };
 
             setLiveSignals(newSignals);
@@ -77,9 +103,16 @@ export default function Calibration() {
                 newSignals.r1 === lastRecordedSignals.r1 &&
                 newSignals.r2 === lastRecordedSignals.r2 &&
                 newSignals.r3 === lastRecordedSignals.r3 &&
-                newSignals.distance === lastRecordedSignals.distance;
+                newSignals.rawR1 === lastRecordedSignals.rawR1 &&
+                newSignals.rawR2 === lastRecordedSignals.rawR2 &&
+                newSignals.rawR3 === lastRecordedSignals.rawR3 &&
+                newSignals.d1 === (lastRecordedSignals as any).d1 &&
+                newSignals.d2 === (lastRecordedSignals as any).d2 &&
+                newSignals.d3 === (lastRecordedSignals as any).d3;
 
-            if (newSignals.r1 === null || newSignals.r2 === null || newSignals.r3 === null || newSignals.distance === null || alreadyRecorded) {
+            // Require RSSI for all three readers and at least one distance value
+            const hasDistance = newSignals.d1 !== null || newSignals.d2 !== null || newSignals.d3 !== null;
+            if (newSignals.r1 === null || newSignals.r2 === null || newSignals.r3 === null || !hasDistance || alreadyRecorded) {
                 return;
             }
 
@@ -116,12 +149,18 @@ export default function Calibration() {
         }
 
         if (liveSignals.r1 === null || liveSignals.r2 === null || liveSignals.r3 === null) {
-            alert('No live signals detected. Please ensure sensors are active.');
+            alert('No live RSSI signals detected. Please ensure sensors are active.');
+            return;
+        }
+
+        const hasDistance = (liveSignals as any).d1 !== null || (liveSignals as any).d2 !== null || (liveSignals as any).d3 !== null;
+        if (!hasDistance) {
+            alert('No distance values detected. Ensure at least one reader provides distance1/distance2/distance3.');
             return;
         }
 
         if (!isRecording) {
-            setLastRecordedSignals({ r1: null, r2: null, r3: null, distance: null });
+            setLastRecordedSignals({ r1: null, r2: null, r3: null, rawR1: null, rawR2: null, rawR3: null, d1: null, d2: null, d3: null });
             setRecordedCount(0);
         }
 
