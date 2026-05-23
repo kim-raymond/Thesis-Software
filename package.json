@@ -6,7 +6,8 @@
     "dev": "next dev --webpack",
     "build": "next build --webpack",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "test:localization": "node scripts/test_localization.js"
   },
   "dependencies": {
     "@tensorflow/tfjs": "^4.22.0",
