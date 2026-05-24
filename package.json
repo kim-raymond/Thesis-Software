@@ -7,7 +7,8 @@
     "build": "next build --webpack",
     "start": "next start",
     "lint": "eslint",
-    "test:localization": "node scripts/test_localization.js"
+    "test:localization": "node scripts/test_localization.js",
+    "test:localization:augmented": "node scripts/test_localization_augmented.js"
   },
   "dependencies": {
     "@tensorflow/tfjs": "^4.22.0",

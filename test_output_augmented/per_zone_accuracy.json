@@ -1,0 +1,32 @@
+{
+  "7": {
+    "zoneId": 7,
+    "totalTests": 20,
+    "correct": 20,
+    "accuracy": 1
+  },
+  "8": {
+    "zoneId": 8,
+    "totalTests": 20,
+    "correct": 15,
+    "accuracy": 0.75
+  },
+  "9": {
+    "zoneId": 9,
+    "totalTests": 20,
+    "correct": 4,
+    "accuracy": 0.2
+  },
+  "10": {
+    "zoneId": 10,
+    "totalTests": 20,
+    "correct": 11,
+    "accuracy": 0.55
+  },
+  "11": {
+    "zoneId": 11,
+    "totalTests": 20,
+    "correct": 8,
+    "accuracy": 0.4
+  }
+}
