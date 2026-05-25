@@ -1,5 +1,4 @@
 'use client'
-
 import { useState, useEffect, use } from "react";
 import { db } from "@src/lib/firebase"; 
 import { collection, addDoc, onSnapshot, query, orderBy, serverTimestamp, deleteDoc, doc } from "firebase/firestore";
@@ -28,8 +27,8 @@ export default function History() {
                 data:doc.data(),
             })));
         });
-        return ( )=> unsubscribe();
-    },["history"]);
+        return () => unsubscribe();
+    }, []);
 
     return (
         <div className='w-full h-full flex flex-col gap-[2rem] bg-white text-[1rem] px-[2rem] py-[1rem] shadow-md rounded-lg'>

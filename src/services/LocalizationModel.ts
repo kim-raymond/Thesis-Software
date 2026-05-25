@@ -99,10 +99,8 @@ export const initAndTrainModel = (): void => {
   }
 };
 
-/**
- * Predicts the current Zone based on live negative RSSI and distance with confidence score
- * Confidence is estimated based on distance to training data
- */
+/**Predicts the current Zone based on live negative RSSI and distance with confidence score
+ * Confidence is estimated based on distance to training data*/
 
 export const predictCurrentZone = (r1: any, r2: any, r3: any, d1: any, d2: any, d3: any, rawR1?: any, rawR2?: any, rawR3?: any): PredictionResult | undefined => {
   //  Basic Validation - Allow NaN for distances, but ensure RSSIs are present
@@ -142,15 +140,15 @@ export const predictCurrentZone = (r1: any, r2: any, r3: any, d1: any, d2: any, 
     console.log(`  Check 3: ${val3} > -62? ${check3}`);
     
     if (check1) {
-      console.log(`    ✅ Check 1 PASSED - setting heuristicZoneId = 7`);
+      console.log(`    Check 1 PASSED - setting heuristicZoneId = 7`);
       heuristicZoneId = 7;
     }
     if (check2) {
-      console.log(`    ✅ Check 2 PASSED - setting heuristicZoneId = 8`);
+      console.log(`    Check 2 PASSED - setting heuristicZoneId = 8`);
       heuristicZoneId = 8;
     }
     if (check3) {
-      console.log(`    ✅ Check 3 PASSED - setting heuristicZoneId = 9`);
+      console.log(`    Check 3 PASSED - setting heuristicZoneId = 9`);
       heuristicZoneId = 9;
     }
     
@@ -163,10 +161,10 @@ export const predictCurrentZone = (r1: any, r2: any, r3: any, d1: any, d2: any, 
 
     // Overwrite with heuristic if very close to a known reader
     if (heuristicZoneId !== -1) {
-        console.log(`  ✅ APPLYING HEURISTIC: Overwriting prediction ${predictedId} → ${heuristicZoneId}`);
+        console.log(`  APPLYING HEURISTIC: Overwriting prediction ${predictedId} → ${heuristicZoneId}`);
         predictedId = heuristicZoneId;
     } else {
-        console.log(`  ⚠️ Heuristic NOT triggered (value = -1)`);
+        console.log(`  Heuristic NOT triggered (value = -1)`);
     }
 
     // Calculate confidence based on proximity to training data IN THE PREDICTED ZONE

@@ -96,34 +96,83 @@ function Map({ isBiomed, setIsBiomed, selectedTagId }: stateProps) {
 
           const result = predictCurrentZone(r1, r2, r3, d1, d2, d3, rawR1, rawR2, rawR3);
 
+          // helper: extract battery if present in any incoming doc
+          const findBatteryValue = (arr: any[]) => {
+            for (const item of arr) {
+              const b = item?.battery ?? item?.Battery ?? item?.batt ?? item?.batteryLevel ?? item?.battery_level ?? item?.BATTERY;
+              if (b !== undefined && b !== null && !isNaN(Number(b))) return Number(b);
+            }
+            return null;
+          };
+
+          const batteryValue = findBatteryValue(docs);
+
+          const isCvsBack = (res: any) => !!(res && res.zone && String(res.zone.name).toUpperCase() === 'CVS BACK');
+
           if (result && result.confidence > 80) {
             try {
               await addDoc(collection(db, "history"), {
-                Battery: 20,
+                Battery: batteryValue ?? 20,
                 Location: result.zone.name,
                 tagId: selectedTagId,
                 assetName: tag.name,
                 time: serverTimestamp(),
               });
+
+              if (isCvsBack(result)) {
+                await addDoc(collection(db, "notification"), {
+                  message: 'asset is out of range',
+                  tagId: selectedTagId,
+                  assetName: tag.name,
+                  Location: result.zone.name,
+                  time: serverTimestamp(),
+                });
+              }
+
               lastZoneRef.current = result.zone.id;
             } catch (error) {
-              console.error("Error writing to history:", error);
+              console.error("Error writing to history/notification:", error);
             }
             console.warn(`[${selectedTagId}] High confidence (${result.confidence.toFixed(1)}%): ${result.zone.name}`);
             setCurrentZone(result.zone);
           } else if (result) {
             try {
               await addDoc(collection(db, "history"), {
-                Battery: 20,
+                Battery: batteryValue ?? 20,
                 Location: result.zone.name,
                 tagId: selectedTagId,
                 assetName: tag.name,
                 time: serverTimestamp(),
               });
+
+              if (isCvsBack(result)) {
+                await addDoc(collection(db, "notification"), {
+                  message: 'asset is out of range',
+                  tagId: selectedTagId,
+                  assetName: tag.name,
+                  Location: result.zone.name,
+                  time: serverTimestamp(),
+                });
+              }
             } catch (error) {
-              console.error("Error writing to history:", error);
+              console.error("Error writing to history/notification:", error);
             }
             console.warn(`[${selectedTagId}] Low confidence (${result.confidence.toFixed(1)}%) - Position unchanged`);
+          } else {
+            // no prediction result available — still notify on low battery
+            if (batteryValue !== null && batteryValue < 20) {
+              try {
+                await addDoc(collection(db, "notification"), {
+                  message: `battery ${batteryValue}%`,
+                  tagId: selectedTagId,
+                  assetName: tag.name,
+                  Battery: batteryValue,
+                  time: serverTimestamp(),
+                });
+              } catch (error) {
+                console.error("Error writing low-battery notification:", error);
+              }
+            }
           }
         }
       }
