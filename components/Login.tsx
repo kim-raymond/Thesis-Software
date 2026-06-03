@@ -56,7 +56,7 @@ export default function ({logIn, setLogIn}:LogInProps){
             <div className=''>
             <p className='text-center text-stone-500 text-[0.75rem] mt-[2rem]'>Copyright © 2026. All rights reserved.</p>
             {/* <p className='text-center text-stone-500 text-[0.875rem]'>Designed and Developed by</p> */}
-            <p className='text-center text-stone-500 text-[0.75rem]'>magallanes | pacheco</p>
+            <p className='text-center text-stone-500 text-[0.75rem]'>magallanes | pacheco | dunque</p>
             </div>
         </div>
     )
